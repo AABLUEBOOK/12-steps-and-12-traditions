@@ -1,0 +1,133 @@
+export const chapterContent9 = {
+  'tradition-four': `
+<h2 class="text-xl font-semibold text-white mb-2">Tradition Four</h2>
+<p class="text-teal-400 italic mb-6">"Each group should be autonomous except in matters affecting other groups or A.A. as a whole."</p>
+
+<div class="prose prose-invert prose-slate max-w-none">
+<p>AUTONOMY is a ten-dollar word. But in relation to us, it means very simply that every A.A. group can manage its affairs exactly as it pleases, except when A.A. as a whole is threatened. Comes now the same question raised in Tradition One. Isn't such liberty foolishly dangerous?</p>
+
+<p>Over the years, every conceivable deviation from our Twelve Steps and Traditions has been tried. That was sure to be, since we are so largely a band of ego-driven individualists. Children of chaos, we have defiantly played with every brand of fire, only to emerge unharmed and, we think, wiser. <span class="highlight-result">These very deviations created a vast process of trial and error which, under the grace of God, has brought us to where we stand today.</span></p>
+
+<p>When A.A.'s Traditions were first published, in 1946, we had become sure that an A.A. group could stand almost any amount of battering. We saw that the group, exactly like the individual, must eventually conform to whatever tested principles would guarantee survival. We had discovered that there was perfect safety in the process of trial and error. So confident of this had we become that the original statement of A.A. tradition carried this significant sentence: "Any two or three alcoholics gathered together for sobriety may call themselves an A.A. group provided that as a group they have no other affiliation."</p>
+
+<p>This meant, of course, that we had been given the courage to declare each A.A. group an individual entity, strictly reliant on its own conscience as a guide to action. <span class="highlight-action">In charting this enormous expanse of freedom, we found it necessary to post only two storm signals: A group ought not do anything which would greatly injure A.A. as a whole, nor ought it affiliate itself with anything or anybody else.</span> There would be real danger should we commence to call some groups "wet," others "dry," still others "Republican" or "Communist," and yet others "Catholic" or "Protestant." The A.A. group would have to stick to its course or be hopelessly lost. Sobriety had to be its sole objective. In all other respects there was perfect freedom of will and action. Every group had the right to be wrong.</p>
+
+<p>When A.A. was still young, lots of eager groups were forming. In a town we'll call Middleton, a real crackerjack had started up. The townspeople were as hot as firecrackers about it. Stargazing, the elders dreamed of innovations. They figured the town needed a great big alcoholic center, a kind of pilot plant A.A. groups could duplicate everywhere. Beginning on the ground floor there would be a club; in the second story they would sober up drunks and hand them currency for their back debts; the third deck would house an educational project—quite noncontroversial, of course. In imagination the gleaming center was to go up several stories more, but three would do for a start. This would all take a lot of money—other people's money. Believe it or not, wealthy townsfolk bought the idea.</p>
+
+<p>There were, though, a few conservative dissenters among the alcoholics. They wrote the Foundation, A.A.'s headquarters in New York, wanting to know about this sort of streamlining. They understood that the elders, just to nail things down good, were about to apply to the Foundation for a charter. These few were disturbed and skeptical.</p>
+
+<p>Of course, there was a promoter in the deal—a super-promoter. By his eloquence he allayed all fears, despite advice from the Foundation that it could issue no charter, and that ventures which mixed an A.A. group with medication and education had come to sticky ends elsewhere. To make things safer, the promoter organized three corporations and became president of them all. Freshly painted, the new center shone. The warmth of it all spread through the town. Soon things began to hum. To insure foolproof, continuous operation, sixty-one rules and regulations were adopted.</p>
+
+<p><span class="highlight-problem">But alas, this bright scene was not long in darkening. Confusion replaced serenity. It was found that some drunks yearned for education, but doubted if they were alcoholics. The personality defects of others could be cured maybe with a loan. Some were club-minded, but it was just a question of taking care of the lonely heart. Sometimes the swarming applicants would go for all three floors. Some would start at the top and come through to the bottom, becoming club members; others started in the club, pitched a binge, were hospitalized, then graduated to education on the third floor. It was a beehive of activity, all right, but unlike a beehive, it was confusion compounded.</span> An A.A. group, as such, simply couldn't handle this sort of project. All too late that was discovered. Then came the inevitable explosion—something like that day the boiler burst in Wombley's Clapboard Factory. A chill choke damp of fear and frustration fell over the group.</p>
+
+<p><span class="highlight-result">When that lifted, a wonderful thing had happened. The head promoter wrote the Foundation office. He said he wished he'd paid some attention to A.A. experience. Then he did something else that was to become an A.A. classic. It all went on a little card about golf-score size. The cover read: "Middleton Group #1. Rule #62." Once the card was unfolded, a single pungent sentence leaped to the eye: "Don't take yourself too damn seriously."</span></p>
+
+<p>Thus it was that under Tradition Four an A.A. group had exercised its right to be wrong. Moreover, it had performed a great service for Alcoholics Anonymous, because it had been humbly willing to apply the lessons it learned. It had picked itself up with a laugh and gone on to better things. Even the chief architect, standing in the ruins of his dream, could laugh at himself—and that is the very acme of humility.</p>
+</div>
+`,
+
+  'tradition-five': `
+<h2 class="text-xl font-semibold text-white mb-2">Tradition Five</h2>
+<p class="text-teal-400 italic mb-6">"Each group has but one primary purpose—to carry the message to the alcoholic who still suffers."</p>
+
+<div class="prose prose-invert prose-slate max-w-none">
+<p>"SHOEMAKER, stick to thy last!"... better do one thing supremely well than many badly. That is the central theme of this Tradition. Around it our Society gathers in unity. <span class="highlight-solution">The very life of our Fellowship requires the preservation of this principle.</span></p>
+
+<p>Alcoholics Anonymous can be likened to a group of physicians who might find a cure for cancer, and upon whose concerted work would depend the answer for sufferers of this disease. True, each physician in such a group might have his own specialty. Every doctor concerned would at times wish he could devote himself to his chosen field rather than work only with the group. But once these men had hit upon a cure, once it became apparent that only by their united effort could this be accomplished, then all of them would feel bound to devote themselves solely to the relief of cancer. In the radiance of such a miraculous discovery, any doctor would set his other ambitions aside, at whatever personal cost.</p>
+
+<p>Just as firmly bound by obligation are the members of Alcoholics Anonymous, who have demonstrated that they can help problem drinkers as others seldom can. <span class="highlight-solution">The unique ability of each A.A. to identify himself with, and bring recovery to, the newcomer in no way depends upon his learning, eloquence, or on any special individual skills. The only thing that matters is that he is an alcoholic who has found a key to sobriety.</span> These legacies of suffering and of recovery are easily passed among alcoholics, one to the other. This is our gift from God, and its bestowal upon others like us is the one aim that today animates A.A.'s all around the globe.</p>
+
+<p><span class="highlight-action">There is another reason for this singleness of purpose. It is the great paradox of A.A. that we know we can seldom keep the precious gift of sobriety unless we give it away.</span> If a group of doctors possessed a cancer cure, they might be conscience-stricken if they failed their mission through self-seeking. Yet such a failure wouldn't jeopardize their personal survival. For us, if we neglect those who are still sick, there is unremitting danger to our own lives and sanity. Under these compulsions of self-preservation, duty, and love, it is not strange that our Society has concluded that it has but one high mission—to carry the A.A. message to those who don't know there's a way out.</p>
+
+<p>Highlighting the wisdom of A.A.'s single purpose, a member tells this story:</p>
+
+<p>"Restless one day, I felt I'd better do some Twelfth Step work. Maybe I should take out some insurance against a slip. But first I'd have to find a drunk to work on.</p>
+
+<p>"So I hopped the subway to Towns Hospital, where I asked Dr. Silkworth if he had a prospect. 'Nothing too promising,' the little doc said. 'There's just one chap on the third floor who might be a possibility. But he's an awfully tough Irishman. I never saw a man so obstinate. He shouts that if his partner would treat him better, and his wife would leave him alone, he'd soon solve his alcohol problem. He's had a bad case of D.T.'s, he's pretty foggy, and he's very suspicious of everybody. Doesn't sound too good, does it? But working with him may do something for you, so why don't you have a go at it?'</p>
+
+<p>"I was soon sitting beside a big hulk of a man. Decidedly unfriendly, he stared at me out of eyes which were slits in his red and swollen face. I had to agree with the doctor—he certainly didn't look good. But I told him my own story. I explained what a wonderful Fellowship we had, how well we understood each other. I bore down hard on the hopelessness of the drunk's dilemma. I insisted that few drunks could ever get well on their own steam, but that in our groups we could do together what we could not do separately. He interrupted to scoff at this and asserted he'd fix his wife, his partner, and his alcoholism by himself. Sarcastically he asked, 'How much does your scheme cost?'</p>
+
+<p>"I was thankful I could tell him, 'Nothing at all.'</p>
+
+<p>"His next question: 'What are you getting out of it?'</p>
+
+<p>"Of course, my answer was 'My own sobriety and a mighty happy life.'</p>
+
+<p>"Still dubious, he demanded, 'Do you really mean the only reason you are here is to try and help me and to help yourself?'</p>
+
+<p>"'Yes,' I said. 'That's absolutely all there is to it. There's no angle.'</p>
+
+<p>"Then, hesitantly, I ventured to talk about the spiritual side of our program. What a freeze that drunk gave me! I'd no sooner got the word 'spiritual' out of my mouth than he pounced. 'Oh!' he said. 'Now I get it! You're proselytizing for some damn religious sect or other. Where do you get that "no angle" stuff? I belong to a great church that means everything to me. You've got a nerve to come in here talking religion!'</p>
+
+<p>"Thank heaven I came up with the right answer for that one. It was based foursquare on the single purpose of A.A. <span class="highlight-solution">'You have faith,' I said. 'Perhaps far deeper faith than mine. No doubt you're better taught in religious matters than I. So I can't tell you anything about religion. I don't even want to try. I'll bet, too, that you could give me a letter-perfect definition of humility. But from what you've told me about yourself and your problems and how you propose to lick them, I think I know what's wrong.'</span></p>
+
+<p>"'Okay,' he said. 'Give me the business.'</p>
+
+<p>"'Well,' said I, 'I think you're just a conceited Irishman who thinks he can run the whole show.'</p>
+
+<p>"This really rocked him. But as he calmed down, he began to listen while I tried to show him that humility was the main key to sobriety. Finally, he saw that I wasn't attempting to change his religious views, that I wanted him to find the grace in his own religion that would aid his recovery. From there on we got along fine.</p>
+
+<p>"Now," concludes the oldtimer, "suppose I'd been obliged to talk to this man on religious grounds? Suppose my answer had to be that A.A. needed a lot of money; that A.A. went in for education, hospitals, and rehabilitation? Suppose I'd suggested that I'd take a hand in his domestic and business affairs? Where would we have wound up? No place, of course."</p>
+
+<p><span class="highlight-result">Years later, this tough Irish customer liked to say, "My sponsor sold me one idea, and that was sobriety. At the time, I couldn't have bought anything else."</span></p>
+</div>
+`,
+
+  'tradition-six': `
+<h2 class="text-xl font-semibold text-white mb-2">Tradition Six</h2>
+<p class="text-teal-400 italic mb-6">"An A.A. group ought never endorse, finance or lend the A.A. name to any related facility or outside enterprise, lest problems of money, property and prestige divert us from our primary purpose."</p>
+
+<div class="prose prose-invert prose-slate max-w-none">
+<p>THE moment we saw that we had an answer for alcoholism, it was reasonable (or so it seemed at the time) for us to feel that we might have the answer to a lot of other things. The A.A. groups, many thought, could go into business, might finance any enterprise whatever in the total field of alcoholism. In fact, we felt duty-bound to throw the whole weight of the A.A. name behind any meritorious cause.</p>
+
+<p><span class="highlight-problem">Here are some of the things we dreamed. Hospitals didn't like alcoholics, so we thought we'd build a hospital chain of our own. People needed to be told what alcoholism was, so we'd educate the public, even rewrite school and medical textbooks. We'd gather up derelicts from skid rows, sort out those who could get well, and make it possible for the rest to earn their livelihood in a kind of quarantined confinement. Maybe these places would make large sums of money to carry on our other good works. We seriously thought of rewriting the laws of the land, and having it declared that alcoholics are sick people. No more would they be jailed; judges would parole them in our custody. We'd spill A.A. into the dark regions of dope addiction and criminality. We'd form groups of depressive and paranoid folks; the deeper the neurosis, the better we'd like it. It stood to reason that if alcoholism could be licked, so could any problem.</span></p>
+
+<p>It occurred to us that we could take what we had into the factories and cause laborers and capitalists to love each other. Our uncompromising honesty might soon clean up politics. With one arm around the shoulder of religion and the other around the shoulder of medicine, we'd resolve their differences. Having learned to live so happily, we'd show everybody else how. Why, we thought, our Society of Alcoholics Anonymous might prove to be the spearhead of a new spiritual advance! We might transform the world.</p>
+
+<p>Yes, we of A.A. did dream those dreams. How natural that was, since most alcoholics are bankrupt idealists. Nearly every one of us had wished to do great good, perform great deeds, and embody great ideals. We are all perfectionists who, failing perfection, have gone to the other extreme and settled for the bottle and the blackout. Providence, through A.A., had brought us within reach of our highest expectations. So why shouldn't we share our way of life with everyone?</p>
+
+<p><span class="highlight-result">Whereupon we tried A.A. hospitals—they all bogged down because you cannot put an A.A. group into business; too many busybody cooks spoil the broth. A.A. groups had their fling at education, and when they began to publicly whoop up the merits of this or that brand, people became confused. Did A.A. fix drunks or was it an educational project? Was A.A. spiritual or was it medical? Was it a reform movement?</span> In consternation, we saw ourselves getting married to all kinds of enterprises, some good and some not so good. Watching alcoholics committed willy-nilly to prisons or asylums, we began to cry, "There oughtta be a law!" A.A.'s commenced to thump tables in legislative committee rooms and agitated for legal reform. That made good newspaper copy, but little else. We saw we'd soon be mired in politics. Even inside A.A. we found it imperative to remove the A.A. name from clubs and Twelfth Step houses.</p>
+
+<p><span class="highlight-solution">These adventures implanted a deep-rooted conviction that in no circumstances could we endorse any related enterprise, no matter how good. We of Alcoholics Anonymous could not be all things to all men, nor should we try.</span></p>
+</div>
+`,
+
+  'tradition-seven': `
+<h2 class="text-xl font-semibold text-white mb-2">Tradition Seven</h2>
+<p class="text-teal-400 italic mb-6">"Every A.A. group ought to be fully self-supporting, declining outside contributions."</p>
+
+<div class="prose prose-invert prose-slate max-w-none">
+<p><span class="highlight-result">SELF-SUPPORTING alcoholics? Who ever heard of such a thing? Yet we find that's what we have to be.</span> This principle is telling evidence of the profound change that A.A. has wrought in all of us. Everybody knows that active alcoholics scream that they have no troubles money can't cure. Always, we've had our hands out. Time out of mind we've been dependent upon somebody, usually moneywise. When a society composed entirely of alcoholics says it's going to pay its bills, that's really news.</p>
+
+<p>Probably no A.A. Tradition had the labor pains this one did. In early times, we were all broke. When you add to this the habitual supposition that people ought to give money to alcoholics trying to stay sober, it can be understood why we thought we deserved a pile of folding money. What great things A.A. would be able to do with it! But oddly enough, people who had money thought otherwise. They figured that it was high time we now—sober—paid our own way. So our Fellowship stayed poor because it had to.</p>
+
+<p>There was another reason for our collective poverty. It was soon apparent that while alcoholics would spend lavishly on Twelfth Step cases, they had a terrific aversion to dropping money into a meeting-place hat for group purposes. We were astounded to find that we were as tight as the bark on a tree. So A.A., the movement, started and stayed broke, while its individual members waxed prosperous.</p>
+
+<p><span class="highlight-problem">Alcoholics are certainly all-or-nothing people. Our reactions to money prove this. As A.A. emerged from its infancy into adolescence, we swung from the idea that we needed vast sums of money to the notion that A.A. shouldn't have any.</span> On every lip were the words "You can't mix A.A. and money. We shall have to separate the spiritual from the material." We took this violent new tack because here and there members had tried to make money out of their A.A. connections, and we feared we'd be exploited. Now and then, grateful benefactors had endowed clubhouses, and as a result there was sometimes outside interference in our affairs. We had been presented with a hospital, and almost immediately the donor's son became its principal patient and would-be manager. One A.A. group was given five thousand dollars to do with what it would. The hassle over that chunk of money played havoc for years. Frightened by these complications, some groups refused to have a cent in their treasuries.</p>
+
+<p>Despite these misgivings, we had to recognize the fact that A.A. had to function. Meeting places cost something. To save whole areas from turmoil, small offices had to be set up, telephones installed, and a few full-time secretaries hired. Over many protests, these things were accomplished. We saw that if they weren't, the man coming in the door couldn't get a break. <span class="highlight-action">These simple services would require small sums of money which we could and would pay ourselves.</span> At last the pendulum stopped swinging and pointed straight at Tradition Seven as it reads today.</p>
+
+<p>In this connection, Bill likes to tell the following pointed story. He explains that when Jack Alexander's Saturday Evening Post piece broke in 1941, thousands of frantic letters from distraught alcoholics and their families hit the Foundation letterbox in New York. "Our office staff," Bill says, "consisted of two people: one devoted secretary and myself. How could this landslide of appeals be met? We'd have to have some more full-time help, that was sure. So we asked the A.A. groups for voluntary contributions. Would they send us a dollar a member a year? Otherwise this heartbreaking mail would have to go unanswered.</p>
+
+<p>"To my surprise, the response of the groups was slow. I got mighty sore about it. Looking at this avalanche of mail one morning at the office, I paced up and down ranting how irresponsible and tightwad my fellow members were. Just then an old acquaintance stuck a tousled and aching head in the door. He was our prize slippee. I could see he had an awful hangover. Remembering some of my own, my heart filled with pity. I motioned him to my inside cubicle and produced a five-dollar bill. As my total income was thirty dollars a week at the time, this was a fairly large donation. Lois really needed the money for groceries, but that didn't stop me. The intense relief on my friend's face warmed my heart. I felt especially virtuous as I thought of all the ex-drunks who wouldn't even send the Foundation a dollar apiece, and here I was gladly making a five-dollar investment to fix a hangover.</p>
+
+<p>"The meeting that night was at New York's old 24th Street Clubhouse. During the intermission, the treasurer gave a timid talk on how broke the club was. (That was in the period when you couldn't mix money and A.A.) But finally he said it—the landlord would put us out if we didn't pay up. He concluded his remarks by saying, 'Now boys, please go heavier on the hat tonight, will you?'</p>
+
+<p>"I heard all this quite plainly, as I was piously trying to convert a newcomer who sat next to me. The hat came in my direction, and I reached into my pocket. Still working on my prospect, I fumbled and came up with a fifty-cent piece. Somehow it looked like a very big coin. Hastily, I dropped it back and fished out a dime, which clinked thinly as I dropped it in the hat. Hats never got folding money in those days.</p>
+
+<p><span class="highlight-result">"Then I woke up. I who had boasted my generosity that morning was treating my own club worse than the distant alcoholics who had forgotten to send the Foundation their dollars. I realized that my five-dollar gift to the slippee was an ego-feeding proposition, bad for him and bad for me. There was a place in A.A. where spirituality and money would mix, and that was in the hat!"</span></p>
+
+<p>There is another story about money. One night in 1948, the trustees of the Foundation were having their quarterly meeting. The agenda discussion included a very important question. A certain lady had died. When her will was read, it was discovered she had left Alcoholics Anonymous in trust with the Alcoholic Foundation a sum of ten thousand dollars. The question was: Should A.A. take the gift?</p>
+
+<p>What a debate we had on that one! The Foundation was really hard up just then; the groups weren't sending in enough for the support of the office; we had been tossing in all the book income and even that hadn't been enough. The reserve was melting like snow in springtime. We needed that ten thousand dollars. "Maybe," some said, "the groups will never fully support the office. We can't let it shut down; it's far too vital. Yes, let's take the money. Let's take all such donations in the future. We're going to need them."</p>
+
+<p>Then came the opposition. They pointed out that the Foundation board already knew of a total of half a million dollars set aside for A.A. in the wills of people still alive. Heaven only knew how much there was we hadn't heard about. If outside donations weren't declined, absolutely cut off, then the Foundation would one day become rich. Moreover, at the slightest intimation to the general public from our trustees that we needed money, we could become immensely rich. Compared to this prospect, the ten thousand dollars under consideration wasn't much, but like the alcoholic's first drink it would, if taken, inevitably set up a disastrous chain reaction. Where would that land us? Whoever pays the piper is apt to call the tune, and if the A.A. Foundation obtained money from outside sources, its trustees might be tempted to run things without reference to the wishes of A.A. as a whole. Relieved of responsibility, every alcoholic would shrug and say, "Oh, the Foundation is wealthy—why should I bother?" The pressure of that fat treasury would surely tempt the board to invent all kinds of schemes to do good with such funds, and so divert A.A. from its primary purpose. The moment that happened, our Fellowship's confidence would be shaken. The board would be isolated, and would fall under heavy attack of criticism from both A.A. and the public. These were the possibilities, pro and con.</p>
+
+<p><span class="highlight-action">Then our trustees wrote a bright page of A.A. history. They declared for the principle that A.A. must always stay poor. Bare running expenses plus a prudent reserve would henceforth be the Foundation's financial policy. Difficult as it was, they officially declined that ten thousand dollars, and adopted a formal, airtight resolution that all such future gifts would be similarly declined.</span> At that moment, we believe, the principle of corporate poverty was firmly and finally embedded in A.A. tradition.</p>
+
+<p><span class="highlight-result">When these facts were printed, there was a profound reaction. To people familiar with endless drives for charitable funds, A.A. presented a strange and refreshing spectacle. Approving editorials here and abroad generated a wave of confidence in the integrity of Alcoholics Anonymous. They pointed out that the irresponsible had become responsible, and that by making financial independence part of its tradition, Alcoholics Anonymous had revived an ideal that its era had almost forgotten.</span></p>
+</div>
+`
+};
+
+export default chapterContent9;
