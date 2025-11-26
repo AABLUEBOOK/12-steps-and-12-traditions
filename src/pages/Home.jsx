@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Bookmark } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 import HighlightingGuide from '@/components/HighlightingGuide';
 import ChapterCard from '@/components/ChapterCard';
+import SearchBar from '@/components/SearchBar';
 
 export const chapters = [
   { id: 1, title: 'Foreword', slug: 'foreword', pages: 'p. 15', order: 1, section: 'front_matter' },
@@ -36,13 +40,32 @@ export default function Home() {
     <div className="min-h-screen bg-slate-800">
       {/* Header */}
       <header className="pt-10 pb-6 px-4 text-center">
-        <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wide mb-2">
-          Twelve Steps And Twelve Traditions
-        </h1>
-        <p className="text-teal-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-          A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
-        </p>
+        <div className="flex items-center justify-between max-w-3xl mx-auto">
+          <div className="flex-1" />
+          <div className="flex-1 text-center">
+            <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wide mb-2">
+              Twelve Steps And Twelve Traditions
+            </h1>
+            <p className="text-teal-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
+            </p>
+          </div>
+          <div className="flex-1 flex justify-end">
+            <Link
+              to={createPageUrl('Bookmarks')}
+              className="text-teal-400 hover:text-teal-300 p-2"
+              title="My Bookmarks"
+            >
+              <Bookmark className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
       </header>
+
+      {/* Search Bar */}
+      <div className="px-4 pb-4">
+        <SearchBar />
+      </div>
 
       {/* Highlighting Guide */}
       <HighlightingGuide />

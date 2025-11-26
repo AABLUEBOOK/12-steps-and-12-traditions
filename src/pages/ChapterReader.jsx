@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import HighlightingGuide from '@/components/HighlightingGuide';
+import AudioPlayer from '@/components/AudioPlayer';
+import BookmarkButton from '@/components/BookmarkButton';
+import HighlightableContent from '@/components/HighlightableContent';
 import { chapters } from '@/pages/Home';
 import { chapterContent } from '@/components/chapterContent';
 import { chapterContent2 } from '@/components/chapterContent2';
@@ -72,15 +75,16 @@ export default function ChapterReader() {
             Back to Contents
           </Link>
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl md:text-2xl font-serif text-white">
-                {chapter.title}
-              </h1>
-              {chapter.pages && (
-                <p className="text-slate-400 text-sm mt-1">{chapter.pages}</p>
-              )}
+              <div>
+                <h1 className="text-xl md:text-2xl font-serif text-white">
+                  {chapter.title}
+                </h1>
+                {chapter.pages && (
+                  <p className="text-slate-400 text-sm mt-1">{chapter.pages}</p>
+                )}
+              </div>
+              <BookmarkButton chapterSlug={slug} chapterTitle={chapter.title} />
             </div>
-          </div>
         </div>
       </header>
 
@@ -93,12 +97,12 @@ export default function ChapterReader() {
 
       {/* Content */}
       <main className="max-w-3xl mx-auto px-4 py-8">
+        {/* Audio Player */}
+        {content && <AudioPlayer content={content} />}
+
         <div className="bg-slate-700/30 rounded-lg p-6 md:p-8 border border-slate-600/50">
           {content ? (
-            <div 
-              className="chapter-content"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+            <HighlightableContent content={content} chapterSlug={slug} />
           ) : (
             <>
               <p className="text-slate-300 text-center italic">

@@ -9,6 +9,39 @@ export default function Layout({ children }) {
         }
         
         /* Highlight classes for content */
+        /* New highlighting scheme */
+        .highlight-steps {
+          background-color: #fb923c;
+          color: #1e293b;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+        .highlight-prayers {
+          background-color: #4ade80;
+          color: #1e293b;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+        .highlight-promises {
+          background-color: #60a5fa;
+          color: #1e293b;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+        .highlight-info {
+          background-color: #fde047;
+          color: #1e293b;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+        .highlight-tab {
+          background-color: #f472b6;
+          color: #1e293b;
+          padding: 0 2px;
+          border-radius: 2px;
+        }
+
+        /* Legacy classes for backwards compatibility */
         .highlight-problem {
           background-color: #fde047;
           color: #1e293b;
