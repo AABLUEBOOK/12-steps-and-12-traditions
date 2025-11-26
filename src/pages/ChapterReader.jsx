@@ -14,6 +14,7 @@ import { chapterContent7 } from '@/components/chapterContent7';
 import { chapterContent8 } from '@/components/chapterContent8';
 import { chapterContent9 } from '@/components/chapterContent9';
 import { chapterContent10 } from '@/components/chapterContent10';
+import { chapterContent11 } from '@/components/chapterContent11';
 
 // Merge all content
 const allContent = {
@@ -26,7 +27,8 @@ const allContent = {
   ...chapterContent7,
   ...chapterContent8,
   ...chapterContent9,
-  ...chapterContent10
+  ...chapterContent10,
+  ...chapterContent11
 };
 
 export default function ChapterReader() {
