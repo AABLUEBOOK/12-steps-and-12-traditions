@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import { Bookmark } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import HighlightingGuide from '@/components/HighlightingGuide';
 import ChapterCard from '@/components/ChapterCard';
-import SearchBar from '@/components/SearchBar';
+
+// Lazy load search (includes heavy content imports)
+const SearchBar = lazy(() => import('@/components/SearchBar'));
 
 export const chapters = [
   { id: 1, title: 'Foreword', slug: 'foreword', pages: 'p. 15', order: 1, section: 'front_matter' },
@@ -38,7 +40,6 @@ export const chapters = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-800">
-      {/* Header */}
       <header className="pt-10 pb-6 px-4 text-center">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="flex-1" />
@@ -51,26 +52,21 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1 flex justify-end">
-            <Link
-              to={createPageUrl('Bookmarks')}
-              className="text-teal-400 hover:text-teal-300 p-2"
-              title="My Bookmarks"
-            >
+            <Link to={createPageUrl('Bookmarks')} className="text-teal-400 hover:text-teal-300 p-2" title="My Bookmarks">
               <Bookmark className="w-6 h-6" />
             </Link>
           </div>
         </div>
       </header>
 
-      {/* Search Bar */}
       <div className="px-4 pb-4">
-        <SearchBar />
+        <Suspense fallback={<div className="h-10 max-w-md mx-auto bg-slate-700 rounded-lg animate-pulse" />}>
+          <SearchBar />
+        </Suspense>
       </div>
 
-      {/* Highlighting Guide */}
       <HighlightingGuide />
 
-      {/* Chapter List */}
       <main className="max-w-3xl mx-auto px-4 pb-12 pt-4">
         <div className="space-y-2">
           {chapters.map((chapter) => (

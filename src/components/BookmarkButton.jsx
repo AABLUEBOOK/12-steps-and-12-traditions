@@ -1,56 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Bookmark, BookmarkCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 
 export default function BookmarkButton({ chapterSlug, chapterTitle }) {
-  const [isBookmarked, setIsBookmarked] = useState(false);
-  const [bookmarkId, setBookmarkId] = useState(null);
+  const [bookmark, setBookmark] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    checkBookmark();
+    base44.entities.Bookmark.filter({ chapter_slug: chapterSlug })
+      .then(b => setBookmark(b[0] || null))
+      .catch(console.error)
+      .finally(() => setLoading(false));
   }, [chapterSlug]);
 
-  const checkBookmark = async () => {
+  const toggle = useCallback(async () => {
     try {
-      const bookmarks = await base44.entities.Bookmark.filter({ chapter_slug: chapterSlug });
-      if (bookmarks.length > 0) {
-        setIsBookmarked(true);
-        setBookmarkId(bookmarks[0].id);
-      } else {
-        setIsBookmarked(false);
-        setBookmarkId(null);
-      }
-    } catch (error) {
-      console.error('Error checking bookmark:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const toggleBookmark = async () => {
-    try {
-      if (isBookmarked && bookmarkId) {
-        await base44.entities.Bookmark.delete(bookmarkId);
-        setIsBookmarked(false);
-        setBookmarkId(null);
+      if (bookmark) {
+        await base44.entities.Bookmark.delete(bookmark.id);
+        setBookmark(null);
         toast.success('Bookmark removed');
       } else {
-        const newBookmark = await base44.entities.Bookmark.create({
+        const created = await base44.entities.Bookmark.create({
           chapter_slug: chapterSlug,
           chapter_title: chapterTitle
         });
-        setIsBookmarked(true);
-        setBookmarkId(newBookmark.id);
+        setBookmark(created);
         toast.success('Bookmark added');
       }
-    } catch (error) {
-      console.error('Error toggling bookmark:', error);
+    } catch (e) {
       toast.error('Failed to update bookmark');
     }
-  };
+  }, [bookmark, chapterSlug, chapterTitle]);
 
   if (loading) return null;
 
@@ -58,15 +40,10 @@ export default function BookmarkButton({ chapterSlug, chapterTitle }) {
     <Button
       variant="ghost"
       size="icon"
-      onClick={toggleBookmark}
-      className={`${isBookmarked ? 'text-teal-400' : 'text-slate-400'} hover:text-teal-300`}
-      title={isBookmarked ? 'Remove bookmark' : 'Add bookmark'}
+      onClick={toggle}
+      className={`${bookmark ? 'text-teal-400' : 'text-slate-400'} hover:text-teal-300`}
     >
-      {isBookmarked ? (
-        <BookmarkCheck className="w-5 h-5" />
-      ) : (
-        <Bookmark className="w-5 h-5" />
-      )}
+      {bookmark ? <BookmarkCheck className="w-5 h-5" /> : <Bookmark className="w-5 h-5" />}
     </Button>
   );
 }
