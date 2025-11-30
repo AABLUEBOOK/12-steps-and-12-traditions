@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function HighlightingGuide() {
+const HighlightingGuide = memo(function HighlightingGuide() {
   const highlights = [
     { label: 'Steps', color: 'bg-orange-400' },
     { label: 'Prayers', color: 'bg-green-400' },
@@ -22,4 +22,6 @@ export default function HighlightingGuide() {
       </div>
     </div>
   );
-}
+});
+
+export default HighlightingGuide;

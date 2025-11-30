@@ -36,4 +36,6 @@ export default function ChapterCard({ chapter }) {
       </div>
     </Link>
   );
-}
+});
+
+export default ChapterCard;
