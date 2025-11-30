@@ -2,8 +2,29 @@ import React from 'react';
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-slate-800">
+    <div className="min-h-screen bg-slate-800 will-change-auto">
       <style>{`
+        /* Critical render optimizations */
+        * { box-sizing: border-box; }
+        html { 
+          scroll-behavior: smooth;
+          -webkit-text-size-adjust: 100%;
+          text-rendering: optimizeSpeed;
+        }
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          line-height: 1.5;
+        }
+        img, video { max-width: 100%; height: auto; }
+        
+        /* GPU acceleration for animations */
+        .will-change-auto { will-change: auto; }
+        
+        /* Reduce layout shifts */
+        .chapter-content p { min-height: 1.5em; }
+        
         html {
           scroll-behavior: smooth;
         }
@@ -77,18 +98,19 @@ export default function Layout({ children }) {
           min-height: 44px;
           min-width: 44px;
         }
-        
-        /* Typography */
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-        
+
         .font-serif {
           font-family: Georgia, 'Times New Roman', serif;
         }
-      `}</style>
+
+        /* Iframe/embed optimizations */
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+        `}</style>
       {children}
     </div>
   );
