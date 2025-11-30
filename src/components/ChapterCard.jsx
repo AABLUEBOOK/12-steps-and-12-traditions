@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
-export default function ChapterCard({ chapter }) {
+const ChapterCard = memo(function ChapterCard({ chapter }) {
   const { title, pages, step_number, section } = chapter;
   
   const showNumber = section === 'steps' || section === 'traditions';
