@@ -66,12 +66,12 @@ export default function ChapterReader() {
           {content && <AudioPlayer content={content} />}
         </Suspense>
 
-        <div className="bg-slate-700/30 rounded-lg p-6 md:p-8 border border-slate-600/50">
-          <Suspense fallback={<div className="h-40 bg-slate-700/50 rounded animate-pulse" />}>
+        <div className="bg-white rounded-lg p-6 md:p-8 border border-slate-600/50 shadow-2xl">
+          <Suspense fallback={<div className="h-40 bg-gray-100 rounded animate-pulse" />}>
             {content ? (
               <HighlightableContent content={content} chapterSlug={slug} />
             ) : (
-              <p className="text-slate-300 text-center italic">Content for "{chapter.title}" will be added here.</p>
+              <p className="text-gray-600 text-center italic">Content for "{chapter.title}" will be added here.</p>
             )}
           </Suspense>
         </div>

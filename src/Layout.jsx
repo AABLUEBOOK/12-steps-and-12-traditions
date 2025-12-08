@@ -79,34 +79,34 @@ export default function Layout({ children }) {
         /* Highlight classes for content */
         /* New highlighting scheme */
         .highlight-steps {
-          background-color: #fb923c;
-          color: #1e293b;
-          padding: 0 2px;
-          border-radius: 2px;
+          background-color: #fdba74;
+          color: #000000;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
         .highlight-prayers {
-          background-color: #4ade80;
-          color: #1e293b;
-          padding: 0 2px;
-          border-radius: 2px;
+          background-color: #86efac;
+          color: #000000;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
         .highlight-promises {
-          background-color: #60a5fa;
-          color: #1e293b;
-          padding: 0 2px;
-          border-radius: 2px;
+          background-color: #93c5fd;
+          color: #000000;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
         .highlight-info {
-          background-color: #fde047;
-          color: #1e293b;
-          padding: 0 2px;
-          border-radius: 2px;
+          background-color: #fef08a;
+          color: #000000;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
         .highlight-tab {
-          background-color: #f472b6;
-          color: #1e293b;
-          padding: 0 2px;
-          border-radius: 2px;
+          background-color: #f9a8d4;
+          color: #000000;
+          padding: 2px 4px;
+          border-radius: 3px;
         }
 
         /* Legacy classes for backwards compatibility */
