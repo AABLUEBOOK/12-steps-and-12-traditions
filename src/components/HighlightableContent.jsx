@@ -51,7 +51,10 @@ export default function HighlightableContent({ content, chapterSlug }) {
   }, [picker.text, chapterSlug]);
 
   const processedContent = useMemo(() => {
-    let result = content || '';
+    if (!content) return '';
+    let result = content;
+    if (highlights.length === 0) return result;
+    
     highlights.forEach(h => {
       const escaped = h.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       result = result.replace(new RegExp(`(${escaped})`, 'gi'), 

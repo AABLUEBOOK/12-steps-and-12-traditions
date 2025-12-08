@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function Layout({ children }) {
   useEffect(() => {
-    // Set viewport and caching meta tags
+    // Set viewport, caching, and performance meta tags
     const metaTags = [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover' },
       { httpEquiv: 'Cache-Control', content: 'public, max-age=31536000, immutable' },
-      { name: 'theme-color', content: '#1e293b' }
+      { httpEquiv: 'Content-Encoding', content: 'gzip, deflate, br' },
+      { name: 'theme-color', content: '#1e293b' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'mobile-web-app-capable', content: 'yes' }
     ];
     
     metaTags.forEach(({ name, httpEquiv, content }) => {
@@ -22,11 +26,20 @@ export default function Layout({ children }) {
         document.head.appendChild(meta);
       }
     });
+
+    // Preconnect to critical resources
+    const preconnect = document.createElement('link');
+    preconnect.rel = 'preconnect';
+    preconnect.href = window.location.origin;
+    if (!document.querySelector(`link[rel="preconnect"]`)) {
+      document.head.appendChild(preconnect);
+    }
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-800 will-change-auto">
-      <style>{`
+    <ErrorBoundary>
+      <div className="min-h-screen bg-slate-800 will-change-auto">
+        <style>{`
               /* Critical render optimizations */
               * { 
                 box-sizing: border-box;
@@ -54,26 +67,33 @@ export default function Layout({ children }) {
                 max-width: 100%; 
                 height: auto;
                 display: block;
+                loading: lazy;
               }
 
-              /* GPU acceleration */
+              /* GPU acceleration & performance */
               .will-change-auto { 
                 will-change: auto;
                 transform: translateZ(0);
+                backface-visibility: hidden;
+                perspective: 1000px;
               }
 
-              /* Reduce layout shifts */
+              /* Reduce layout shifts & CLS */
               .chapter-content p { min-height: 1.5em; }
 
-        /* Responsive typography */
-        @media (max-width: 640px) {
-          html { font-size: 14px; }
-        }
-        @media (min-width: 641px) and (max-width: 1024px) {
-          html { font-size: 15px; }
-        }
-        @media (min-width: 1025px) {
-          html { font-size: 16px; }
+              /* Content visibility for off-screen optimization */
+              .chapter-card { content-visibility: auto; contain-intrinsic-size: auto 80px; }
+
+        /* Responsive typography - mobile-first */
+        html { font-size: 14px; }
+        @media (min-width: 641px) { html { font-size: 15px; } }
+        @media (min-width: 1025px) { html { font-size: 16px; } }
+
+        /* Fluid containers for all devices */
+        .max-w-3xl { 
+          max-width: min(48rem, 100vw - 2rem); 
+          width: 100%;
+          margin-inline: auto;
         }
 
         /* Highlight classes for content */
@@ -151,10 +171,23 @@ export default function Layout({ children }) {
           font-family: Georgia, 'Times New Roman', serif;
         }
 
-        /* Wix embed optimization */
+        /* Wix embed & responsive optimization */
         @media (max-width: 768px) {
-          .max-w-3xl { max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
-          .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
+          .max-w-3xl { max-width: 100%; padding-inline: 1rem; }
+          .px-4 { padding-inline: 0.75rem; }
+          body { font-size: 14px; }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .max-w-3xl { padding-inline: 1.5rem; }
+          body { font-size: 15px; }
+        }
+        @media (min-width: 1025px) {
+          body { font-size: 16px; }
+        }
+
+        /* Tablet landscape optimization */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+          .max-w-3xl { max-width: 90vw; }
         }
 
         /* Theme support */
@@ -184,7 +217,8 @@ export default function Layout({ children }) {
           }
         }
         `}</style>
-      {children}
-    </div>
-  );
-}
+        {children}
+        </div>
+        </ErrorBoundary>
+        );
+        }

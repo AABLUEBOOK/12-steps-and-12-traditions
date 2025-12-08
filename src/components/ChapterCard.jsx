@@ -9,8 +9,8 @@ const ChapterCard = memo(function ChapterCard({ chapter }) {
   const displayNumber = step_number ? `${step_number}.` : null;
 
   return (
-    <Link to={createPageUrl(`ChapterReader?slug=${chapter.slug}`)} className="block group">
-      <div className="bg-slate-700/50 hover:bg-slate-700/80 border border-slate-600/50 rounded-lg px-5 py-4 transition-all duration-200 flex items-center justify-between">
+    <Link to={createPageUrl(`ChapterReader?slug=${chapter.slug}`)} className="block group chapter-card">
+      <div className="bg-slate-700/50 hover:bg-slate-700/80 border border-slate-600/50 rounded-lg px-5 py-4 transition-all duration-200 flex items-center justify-between will-change-auto">
         <div className="flex items-center gap-3">
           {showNumber && displayNumber && (
             <span className="text-teal-300 font-mono text-sm min-w-[24px]">{displayNumber}</span>

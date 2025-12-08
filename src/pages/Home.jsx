@@ -37,9 +37,9 @@ export const chapters = [
 ];
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-slate-800 w-full">
-      <header className="pt-10 pb-6 px-4 text-center">
+        return (
+          <div className="min-h-screen bg-slate-800 w-full will-change-auto">
+            <header className="pt-10 pb-6 px-4 text-center" role="banner">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="flex-1" />
           <div className="flex-1 text-center">
@@ -64,13 +64,13 @@ export default function Home() {
 
       <HighlightingGuide />
 
-      <main className="max-w-3xl mx-auto px-4 pb-12 pt-4">
-        <div className="space-y-2">
+      <main className="max-w-3xl mx-auto px-4 pb-12 pt-4" role="main">
+        <nav className="space-y-2" role="navigation" aria-label="Chapter list">
           {chapters.map((chapter) => (
             <ChapterCard key={chapter.id} chapter={chapter} />
           ))}
-        </div>
-      </main>
+          </nav>
+          </main>
     </div>
   );
 }

@@ -133,7 +133,7 @@ export default function AudioPlayer({ content }) {
   if (paragraphs.length === 0) return null;
 
   return (
-    <div className="sticky top-14 z-30 bg-slate-700/95 backdrop-blur-sm border border-slate-600 rounded-lg shadow-lg p-3 sm:p-4 mb-4">
+    <div className="sticky top-14 z-30 bg-slate-700/95 backdrop-blur-sm border border-slate-600 rounded-lg shadow-lg p-3 sm:p-4 mb-4 will-change-auto" role="region" aria-label="Audio player">
       <div className="flex items-center gap-2 sm:gap-4">
         <Button
           onClick={togglePlay}
