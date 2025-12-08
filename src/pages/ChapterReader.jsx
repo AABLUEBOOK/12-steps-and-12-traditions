@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import HighlightingGuide from '@/components/HighlightingGuide';
-import BookmarkButton from '@/components/BookmarkButton';
+import Settings from '@/components/Settings';
 import { chapters } from '@/pages/Home';
 import { getChapterContent } from '@/components/allChapterContent';
 
@@ -50,7 +50,7 @@ export default function ChapterReader() {
               <h1 className="text-xl md:text-2xl font-serif text-white">{chapter.title}</h1>
               {chapter.pages && <p className="text-slate-400 text-sm mt-1">{chapter.pages}</p>}
             </div>
-            <BookmarkButton chapterSlug={slug} chapterTitle={chapter.title} />
+            <Settings />
           </div>
         </div>
       </header>

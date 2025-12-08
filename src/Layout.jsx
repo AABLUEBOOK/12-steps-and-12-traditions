@@ -157,6 +157,25 @@ export default function Layout({ children }) {
           .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
         }
 
+        /* Theme support */
+        html.light {
+          --bg-primary: #f8fafc;
+          --bg-secondary: #e2e8f0;
+          --text-primary: #0f172a;
+          --text-secondary: #475569;
+          --border-color: #cbd5e1;
+        }
+        html.light .bg-slate-800 { background-color: var(--bg-primary, #f8fafc) !important; }
+        html.light .bg-slate-700 { background-color: var(--bg-secondary, #e2e8f0) !important; }
+        html.light .text-white { color: var(--text-primary, #0f172a) !important; }
+        html.light .text-slate-300, html.light .text-slate-400 { color: var(--text-secondary, #475569) !important; }
+        html.light .border-slate-600, html.light .border-slate-700 { border-color: var(--border-color, #cbd5e1) !important; }
+
+        /* Text size support */
+        [data-text-size="small"] { font-size: 14px; }
+        [data-text-size="medium"] { font-size: 16px; }
+        [data-text-size="large"] { font-size: 18px; }
+
         /* Iframe/embed optimizations */
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {

@@ -1,9 +1,8 @@
 import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
-import { Bookmark } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import HighlightingGuide from '@/components/HighlightingGuide';
 import ChapterCard from '@/components/ChapterCard';
+import Settings from '@/components/Settings';
 
 // Lazy load search (includes heavy content imports)
 const SearchBar = lazy(() => import('@/components/SearchBar'));
@@ -52,9 +51,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1 flex justify-end">
-            <Link to={createPageUrl('Bookmarks')} className="text-teal-400 hover:text-teal-300 p-2" title="My Bookmarks">
-              <Bookmark className="w-6 h-6" />
-            </Link>
+            <Settings />
           </div>
         </div>
       </header>
