@@ -157,39 +157,19 @@ export default function Layout({ children }) {
           .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
         }
 
-        /* Light theme (default) */
-        html, html.light {
-          --bg-primary: #ffffff;
-          --bg-secondary: #f8fafc;
-          --bg-card: #ffffff;
+        /* Theme support */
+        html.light {
+          --bg-primary: #f8fafc;
+          --bg-secondary: #e2e8f0;
           --text-primary: #0f172a;
           --text-secondary: #475569;
-          --border-color: #e2e8f0;
+          --border-color: #cbd5e1;
         }
-        html .bg-slate-800, html.light .bg-slate-800 { background-color: var(--bg-primary) !important; }
-        html .bg-slate-700, html.light .bg-slate-700 { background-color: var(--bg-secondary) !important; }
-        html .bg-slate-700\/30, html.light .bg-slate-700\/30 { background-color: var(--bg-card) !important; }
-        html .text-white, html.light .text-white { color: var(--text-primary) !important; }
-        html .text-slate-300, html.light .text-slate-300,
-        html .text-slate-400, html.light .text-slate-400 { color: var(--text-secondary) !important; }
-        html .border-slate-600, html.light .border-slate-600,
-        html .border-slate-700, html.light .border-slate-700 { border-color: var(--border-color) !important; }
-
-        /* Dark theme */
-        html.dark {
-          --bg-primary: #1e293b;
-          --bg-secondary: #334155;
-          --bg-card: rgba(51, 65, 85, 0.3);
-          --text-primary: #ffffff;
-          --text-secondary: #cbd5e1;
-          --border-color: #475569;
-        }
-        html.dark .bg-slate-800 { background-color: var(--bg-primary) !important; }
-        html.dark .bg-slate-700 { background-color: var(--bg-secondary) !important; }
-        html.dark .bg-slate-700\/30 { background-color: var(--bg-card) !important; }
-        html.dark .text-white { color: var(--text-primary) !important; }
-        html.dark .text-slate-300, html.dark .text-slate-400 { color: var(--text-secondary) !important; }
-        html.dark .border-slate-600, html.dark .border-slate-700 { border-color: var(--border-color) !important; }
+        html.light .bg-slate-800 { background-color: var(--bg-primary, #f8fafc) !important; }
+        html.light .bg-slate-700 { background-color: var(--bg-secondary, #e2e8f0) !important; }
+        html.light .text-white { color: var(--text-primary, #0f172a) !important; }
+        html.light .text-slate-300, html.light .text-slate-400 { color: var(--text-secondary, #475569) !important; }
+        html.light .border-slate-600, html.light .border-slate-700 { border-color: var(--border-color, #cbd5e1) !important; }
 
         /* Text size support */
         [data-text-size="small"] { font-size: 14px; }

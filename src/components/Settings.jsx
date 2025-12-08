@@ -3,16 +3,11 @@ import { Settings as SettingsIcon, X, Sun, Moon, Type } from 'lucide-react';
 
 export default function Settings() {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
   const [textSize, setTextSize] = useState(localStorage.getItem('textSize') || 'medium');
 
   useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark');
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.add('light');
-    }
+    document.documentElement.classList.toggle('light', theme === 'light');
     localStorage.setItem('theme', theme);
   }, [theme]);
 
