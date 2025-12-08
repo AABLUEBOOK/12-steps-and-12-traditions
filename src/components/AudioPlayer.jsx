@@ -1,14 +1,28 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { Play, Pause, Volume2, VolumeX, SkipBack, SkipForward } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, SkipBack, SkipForward, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+
+const LANGUAGES = [
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Spanish', flag: '🇪🇸' },
+  { code: 'fr', name: 'French', flag: '🇫🇷' },
+  { code: 'de', name: 'German', flag: '🇩🇪' },
+  { code: 'it', name: 'Italian', flag: '🇮🇹' },
+  { code: 'pt', name: 'Portuguese', flag: '🇵🇹' },
+  { code: 'ru', name: 'Russian', flag: '🇷🇺' },
+  { code: 'ja', name: 'Japanese', flag: '🇯🇵' },
+  { code: 'zh', name: 'Chinese', flag: '🇨🇳' },
+  { code: 'ar', name: 'Arabic', flag: '🇸🇦' }
+];
 
 export default function AudioPlayer({ content }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [speed, setSpeed] = useState(1);
-  const [voices, setVoices] = useState([]);
+  const [allVoices, setAllVoices] = useState([]);
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
   const [selectedVoice, setSelectedVoice] = useState('');
   const [currentParagraph, setCurrentParagraph] = useState(0);
   const synthRef = useRef(window.speechSynthesis);
@@ -23,19 +37,43 @@ export default function AudioPlayer({ content }) {
       .filter(text => text && text.length > 0);
   }, [content]);
 
+  const filteredVoices = useMemo(() => {
+    return allVoices
+      .filter(v => v.lang.toLowerCase().startsWith(selectedLanguage))
+      .sort((a, b) => {
+        const aQuality = a.localService ? 1 : 0;
+        const bQuality = b.localService ? 1 : 0;
+        return bQuality - aQuality || a.name.localeCompare(b.name);
+      });
+  }, [allVoices, selectedLanguage]);
+
   useEffect(() => {
     const loadVoices = () => {
       const available = synthRef.current.getVoices();
-      const english = available.filter(v => v.lang.startsWith('en'));
-      setVoices(english);
-      if (english.length > 0 && !selectedVoice) {
-        setSelectedVoice(english[0].name);
+      const professional = available.filter(v => 
+        !v.name.toLowerCase().includes('novelty') &&
+        !v.name.toLowerCase().includes('bad news')
+      );
+      setAllVoices(professional);
+      
+      const englishVoices = professional.filter(v => v.lang.startsWith('en'));
+      if (englishVoices.length > 0 && !selectedVoice) {
+        const preferred = englishVoices.find(v => 
+          v.localService && (v.name.includes('Samantha') || v.name.includes('Google'))
+        ) || englishVoices[0];
+        setSelectedVoice(preferred.name);
       }
     };
     loadVoices();
     synthRef.current.onvoiceschanged = loadVoices;
     return () => { synthRef.current.cancel(); };
   }, []);
+
+  useEffect(() => {
+    if (filteredVoices.length > 0 && !filteredVoices.find(v => v.name === selectedVoice)) {
+      setSelectedVoice(filteredVoices[0].name);
+    }
+  }, [selectedLanguage, filteredVoices]);
 
   const speak = useCallback((index) => {
     if (index >= paragraphs.length) {
@@ -50,8 +88,11 @@ export default function AudioPlayer({ content }) {
     utterance.rate = speed;
     utterance.volume = isMuted ? 0 : 1;
     
-    const voice = voices.find(v => v.name === selectedVoice);
-    if (voice) utterance.voice = voice;
+    const voice = filteredVoices.find(v => v.name === selectedVoice);
+    if (voice) {
+      utterance.voice = voice;
+      utterance.lang = voice.lang;
+    }
 
     utterance.onend = () => {
       if (isPlayingRef.current) {
@@ -64,7 +105,7 @@ export default function AudioPlayer({ content }) {
     };
 
     synthRef.current.speak(utterance);
-  }, [paragraphs, speed, isMuted, selectedVoice, voices]);
+  }, [paragraphs, speed, isMuted, selectedVoice, filteredVoices]);
 
   const togglePlay = useCallback(() => {
     if (isPlaying) {
@@ -124,20 +165,40 @@ export default function AudioPlayer({ content }) {
         </div>
       </div>
 
-      <div className="mt-3 pt-3 border-t border-slate-600 flex flex-wrap items-center gap-3">
+      <div className="mt-3 pt-3 border-t border-slate-600 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400">Speed:</span>
-          <Slider value={[speed]} onValueChange={([val]) => setSpeed(val)} min={0.5} max={2} step={0.25} className="w-20" />
+          <span className="text-xs text-slate-400 whitespace-nowrap">Speed:</span>
+          <Slider value={[speed]} onValueChange={([val]) => setSpeed(val)} min={0.5} max={2} step={0.25} className="flex-1" />
+          <span className="text-xs text-slate-400 w-8">{speed}x</span>
         </div>
-        <div className="flex items-center gap-2 flex-1 min-w-[150px]">
-          <span className="text-xs text-slate-400">Voice:</span>
+        
+        <div className="flex items-center gap-2">
+          <Globe className="w-3 h-3 text-slate-400" />
+          <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+            <SelectTrigger className="flex-1 h-8 text-xs bg-slate-600 border-slate-500 text-white">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {LANGUAGES.map((lang) => (
+                <SelectItem key={lang.code} value={lang.code}>
+                  {lang.flag} {lang.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-slate-400 whitespace-nowrap">Voice:</span>
           <Select value={selectedVoice} onValueChange={setSelectedVoice}>
             <SelectTrigger className="flex-1 h-8 text-xs bg-slate-600 border-slate-500 text-white">
               <SelectValue placeholder="Select voice" />
             </SelectTrigger>
-            <SelectContent>
-              {voices.map((voice) => (
-                <SelectItem key={voice.name} value={voice.name}>{voice.name}</SelectItem>
+            <SelectContent className="max-h-48">
+              {filteredVoices.map((voice) => (
+                <SelectItem key={voice.name} value={voice.name}>
+                  {voice.name.split(' ')[0]} {voice.lang}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
