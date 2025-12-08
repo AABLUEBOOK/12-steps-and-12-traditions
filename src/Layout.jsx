@@ -64,11 +64,18 @@ export default function Layout({ children }) {
 
               /* Reduce layout shifts */
               .chapter-content p { min-height: 1.5em; }
-        
-        html {
-          scroll-behavior: smooth;
+
+        /* Responsive typography */
+        @media (max-width: 640px) {
+          html { font-size: 14px; }
         }
-        
+        @media (min-width: 641px) and (max-width: 1024px) {
+          html { font-size: 15px; }
+        }
+        @media (min-width: 1025px) {
+          html { font-size: 16px; }
+        }
+
         /* Highlight classes for content */
         /* New highlighting scheme */
         .highlight-steps {
