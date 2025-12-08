@@ -13,7 +13,7 @@ const ChapterCard = memo(function ChapterCard({ chapter }) {
       <div className="bg-slate-800/50 hover:bg-slate-800/80 border border-slate-700/50 rounded-lg px-5 py-4 transition-all duration-200 flex items-center justify-between will-change-auto">
         <div className="flex items-center gap-3">
           {showNumber && displayNumber && (
-            <span className="text-cyan-400 font-mono text-sm min-w-[24px]">{displayNumber}</span>
+            <span className="text-accent font-mono text-sm min-w-[24px]">{displayNumber}</span>
           )}
           <span className="text-white font-medium tracking-wide">{title}</span>
         </div>

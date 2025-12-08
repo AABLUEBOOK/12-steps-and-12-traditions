@@ -205,6 +205,13 @@ export default function Layout({ children }) {
         html.light .text-slate-300, html.light .text-slate-400 { color: var(--text-secondary, #475569) !important; }
         html.light .border-slate-600, html.light .border-slate-700 { border-color: var(--border-color, #cbd5e1) !important; }
 
+        /* Custom accent color */
+        .text-accent { color: #0063e3 !important; }
+        .text-accent-hover:hover { color: #0052c2 !important; }
+        .bg-accent { background-color: #0063e3 !important; }
+        .bg-accent-hover:hover { background-color: #0052c2 !important; }
+        .border-accent { border-color: #0063e3 !important; }
+
         /* Text size support */
         [data-text-size="small"] { font-size: 14px; }
         [data-text-size="medium"] { font-size: 16px; }

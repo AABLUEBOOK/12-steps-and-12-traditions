@@ -20,7 +20,7 @@ export default function Settings() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="text-cyan-400 hover:text-cyan-300 p-2"
+        className="text-accent text-accent-hover p-2"
         title="Settings"
       >
         <SettingsIcon className="w-6 h-6" />
@@ -49,7 +49,7 @@ export default function Settings() {
                     onClick={() => setTheme('dark')}
                     className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
                       theme === 'dark'
-                        ? 'bg-cyan-600 border-cyan-500 text-white'
+                        ? 'bg-accent border-accent text-white'
                         : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
                     }`}
                   >
@@ -59,7 +59,7 @@ export default function Settings() {
                     onClick={() => setTheme('light')}
                     className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
                       theme === 'light'
-                        ? 'bg-cyan-600 border-cyan-500 text-white'
+                        ? 'bg-accent border-accent text-white'
                         : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
                     }`}
                   >
@@ -80,7 +80,7 @@ export default function Settings() {
                       onClick={() => setTextSize(size)}
                       className={`flex-1 py-2 px-4 rounded-lg border transition-colors capitalize ${
                         textSize === size
-                          ? 'bg-cyan-600 border-cyan-500 text-white'
+                          ? 'bg-accent border-accent text-white'
                           : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
                       }`}
                     >

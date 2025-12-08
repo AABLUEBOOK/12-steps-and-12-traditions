@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
             <p className="text-slate-300 mb-4">Please refresh the page to continue.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg"
+              className="bg-accent bg-accent-hover text-white px-6 py-2 rounded-lg"
             >
               Refresh Page
             </button>
