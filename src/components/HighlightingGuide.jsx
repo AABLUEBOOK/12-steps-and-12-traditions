@@ -11,12 +11,12 @@ const HighlightingGuide = memo(function HighlightingGuide() {
 
   return (
     <div className="text-center py-4">
-      <p className="text-slate-400 text-sm mb-3 tracking-wide">Highlighting Guide</p>
+      <p className="text-slate-200 text-sm mb-3 tracking-wide">Highlighting Guide</p>
       <div className="flex justify-center items-center gap-4 sm:gap-6 flex-wrap px-4">
         {highlights.map((item) => (
           <div key={item.label} className="flex items-center gap-2">
             <div className={`w-4 h-4 rounded ${item.color}`} />
-            <span className="text-slate-300 text-xs sm:text-sm">{item.label}</span>
+            <span className="text-slate-100 text-xs sm:text-sm">{item.label}</span>
           </div>
         ))}
       </div>

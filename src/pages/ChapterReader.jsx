@@ -29,8 +29,8 @@ export default function ChapterReader() {
     return (
       <div className="min-h-screen bg-slate-800 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-slate-400 mb-4">Chapter not found</p>
-          <Link to={createPageUrl('Home')} className="text-teal-400 hover:text-teal-300 flex items-center gap-2 justify-center">
+          <p className="text-slate-200 mb-4">Chapter not found</p>
+          <Link to={createPageUrl('Home')} className="text-teal-300 hover:text-teal-200 flex items-center gap-2 justify-center">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
         </div>
@@ -42,13 +42,13 @@ export default function ChapterReader() {
     <div className="min-h-screen bg-slate-800 w-full">
       <header className="sticky top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700 z-10">
         <div className="max-w-3xl mx-auto px-4 py-4">
-          <Link to={createPageUrl('Home')} className="text-teal-400 hover:text-teal-300 flex items-center gap-2 text-sm mb-3">
+          <Link to={createPageUrl('Home')} className="text-teal-300 hover:text-teal-200 flex items-center gap-2 text-sm mb-3">
             <ArrowLeft className="w-4 h-4" /> Back to Contents
           </Link>
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-xl md:text-2xl font-serif text-white">{chapter.title}</h1>
-              {chapter.pages && <p className="text-slate-400 text-sm mt-1">{chapter.pages}</p>}
+              {chapter.pages && <p className="text-slate-200 text-sm mt-1">{chapter.pages}</p>}
             </div>
             <Settings />
           </div>
@@ -80,19 +80,19 @@ export default function ChapterReader() {
       <nav className="max-w-3xl mx-auto px-4 pb-12">
         <div className="flex items-center justify-between gap-4">
           {prevChapter ? (
-            <Link to={createPageUrl(`ChapterReader?slug=${prevChapter.slug}`)} className="flex items-center gap-2 text-slate-400 hover:text-white group flex-1">
+            <Link to={createPageUrl(`ChapterReader?slug=${prevChapter.slug}`)} className="flex items-center gap-2 text-slate-200 hover:text-white group flex-1">
               <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <div className="text-left">
-                <p className="text-xs text-slate-500">Previous</p>
+                <p className="text-xs text-slate-300">Previous</p>
                 <p className="text-sm">{prevChapter.title}</p>
               </div>
             </Link>
           ) : <div className="flex-1" />}
-          
+
           {nextChapter ? (
-            <Link to={createPageUrl(`ChapterReader?slug=${nextChapter.slug}`)} className="flex items-center gap-2 text-slate-400 hover:text-white group flex-1 justify-end text-right">
+            <Link to={createPageUrl(`ChapterReader?slug=${nextChapter.slug}`)} className="flex items-center gap-2 text-slate-200 hover:text-white group flex-1 justify-end text-right">
               <div>
-                <p className="text-xs text-slate-500">Next</p>
+                <p className="text-xs text-slate-300">Next</p>
                 <p className="text-sm">{nextChapter.title}</p>
               </div>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

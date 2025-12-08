@@ -46,7 +46,7 @@ export default function Home() {
             <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wide mb-2">
               Twelve Steps And Twelve Traditions
             </h1>
-            <p className="text-teal-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-teal-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
               A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
             </p>
           </div>

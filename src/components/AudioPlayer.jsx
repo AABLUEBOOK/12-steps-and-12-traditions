@@ -144,8 +144,8 @@ export default function AudioPlayer({ content }) {
 
         <div className="flex-1">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-slate-400">Paragraph {currentParagraph + 1} of {paragraphs.length}</span>
-            <span className="text-xs text-slate-400">Speed: {speed}x</span>
+            <span className="text-xs text-slate-200">Paragraph {currentParagraph + 1} of {paragraphs.length}</span>
+            <span className="text-xs text-slate-200">Speed: {speed}x</span>
           </div>
           <div className="w-full bg-slate-600 rounded-full h-2 overflow-hidden">
             <div className="bg-teal-500 h-full transition-all duration-300" style={{ width: `${progress}%` }} />
@@ -153,13 +153,13 @@ export default function AudioPlayer({ content }) {
         </div>
 
         <div className="flex items-center gap-1">
-          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="text-teal-400 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
             <SkipBack className="w-4 h-4" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="text-teal-400 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
             <SkipForward className="w-4 h-4" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="text-teal-400 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
             {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
           </Button>
         </div>
@@ -167,13 +167,13 @@ export default function AudioPlayer({ content }) {
 
       <div className="mt-3 pt-3 border-t border-slate-600 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400 whitespace-nowrap">Speed:</span>
+          <span className="text-xs text-slate-200 whitespace-nowrap">Speed:</span>
           <Slider value={[speed]} onValueChange={([val]) => setSpeed(val)} min={0.5} max={2} step={0.25} className="flex-1" />
-          <span className="text-xs text-slate-400 w-8">{speed}x</span>
+          <span className="text-xs text-slate-200 w-8">{speed}x</span>
         </div>
         
         <div className="flex items-center gap-2">
-          <Globe className="w-3 h-3 text-slate-400" />
+          <Globe className="w-3 h-3 text-slate-200" />
           <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
             <SelectTrigger className="flex-1 h-8 text-xs bg-slate-600 border-slate-500 text-white">
               <SelectValue />
@@ -189,7 +189,7 @@ export default function AudioPlayer({ content }) {
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400 whitespace-nowrap">Voice:</span>
+          <span className="text-xs text-slate-200 whitespace-nowrap">Voice:</span>
           <Select value={selectedVoice} onValueChange={setSelectedVoice}>
             <SelectTrigger className="flex-1 h-8 text-xs bg-slate-600 border-slate-500 text-white">
               <SelectValue placeholder="Select voice" />
