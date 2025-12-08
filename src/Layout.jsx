@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Layout({ children }) {
+  useEffect(() => {
+    // Set viewport and caching meta tags
+    const metaTags = [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes' },
+      { httpEquiv: 'Cache-Control', content: 'public, max-age=31536000, immutable' },
+      { name: 'theme-color', content: '#1e293b' }
+    ];
+    
+    metaTags.forEach(({ name, httpEquiv, content }) => {
+      const existing = name 
+        ? document.querySelector(`meta[name="${name}"]`)
+        : document.querySelector(`meta[http-equiv="${httpEquiv}"]`);
+      
+      if (!existing) {
+        const meta = document.createElement('meta');
+        if (name) meta.name = name;
+        if (httpEquiv) meta.httpEquiv = httpEquiv;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-800 will-change-auto">
       <style>{`
