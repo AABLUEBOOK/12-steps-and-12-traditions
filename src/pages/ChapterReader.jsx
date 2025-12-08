@@ -27,10 +27,10 @@ export default function ChapterReader() {
 
   if (!chapter) {
     return (
-      <div className="min-h-screen bg-slate-800 flex items-center justify-center">
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-slate-200 mb-4">Chapter not found</p>
-          <Link to={createPageUrl('Home')} className="text-teal-300 hover:text-teal-200 flex items-center gap-2 justify-center">
+          <Link to={createPageUrl('Home')} className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2 justify-center">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
         </div>
@@ -39,10 +39,10 @@ export default function ChapterReader() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-800 w-full will-change-auto">
-      <header className="sticky top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700 z-10" role="banner">
+    <div className="min-h-screen bg-slate-900 w-full will-change-auto">
+      <header className="sticky top-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 z-10" role="banner">
         <div className="max-w-3xl mx-auto px-4 py-4">
-          <Link to={createPageUrl('Home')} className="text-teal-300 hover:text-teal-200 flex items-center gap-2 text-sm mb-3">
+          <Link to={createPageUrl('Home')} className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2 text-sm mb-3">
             <ArrowLeft className="w-4 h-4" /> Back to Contents
           </Link>
           <div className="flex items-center justify-between">

@@ -137,7 +137,7 @@ export default function AudioPlayer({ content }) {
       <div className="flex items-center gap-2 sm:gap-4">
         <Button
           onClick={togglePlay}
-          className="bg-teal-500 hover:bg-teal-600 text-slate-900 rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 flex-shrink-0"
+          className="bg-cyan-500 hover:bg-cyan-600 text-slate-900 rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 flex-shrink-0"
         >
           {isPlaying ? <Pause className="w-4 h-4 sm:w-5 sm:h-5" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5" />}
         </Button>
@@ -148,18 +148,18 @@ export default function AudioPlayer({ content }) {
             <span className="text-xs text-slate-200">Speed: {speed}x</span>
           </div>
           <div className="w-full bg-slate-600 rounded-full h-2 overflow-hidden">
-            <div className="bg-teal-500 h-full transition-all duration-300" style={{ width: `${progress}%` }} />
+            <div className="bg-cyan-500 h-full transition-all duration-300" style={{ width: `${progress}%` }} />
           </div>
         </div>
 
         <div className="flex items-center gap-1">
-          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="text-cyan-400 hover:bg-slate-600 w-8 h-8">
             <SkipBack className="w-4 h-4" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="text-cyan-400 hover:bg-slate-600 w-8 h-8">
             <SkipForward className="w-4 h-4" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="text-teal-300 hover:bg-slate-600 w-8 h-8">
+          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="text-cyan-400 hover:bg-slate-600 w-8 h-8">
             {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
           </Button>
         </div>

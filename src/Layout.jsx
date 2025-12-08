@@ -38,7 +38,7 @@ export default function Layout({ children }) {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-slate-800 will-change-auto">
+      <div className="min-h-screen bg-slate-900 will-change-auto">
         <style>{`
               /* Critical render optimizations */
               * { 
@@ -198,7 +198,8 @@ export default function Layout({ children }) {
           --text-secondary: #475569;
           --border-color: #cbd5e1;
         }
-        html.light .bg-slate-800 { background-color: var(--bg-primary, #f8fafc) !important; }
+        html.light .bg-slate-900 { background-color: var(--bg-primary, #f8fafc) !important; }
+        html.light .bg-slate-800 { background-color: var(--bg-secondary, #e2e8f0) !important; }
         html.light .bg-slate-700 { background-color: var(--bg-secondary, #e2e8f0) !important; }
         html.light .text-white { color: var(--text-primary, #0f172a) !important; }
         html.light .text-slate-300, html.light .text-slate-400 { color: var(--text-secondary, #475569) !important; }
