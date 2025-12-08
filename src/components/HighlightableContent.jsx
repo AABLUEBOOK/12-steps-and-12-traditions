@@ -80,7 +80,7 @@ export default function HighlightableContent({ content, chapterSlug }) {
           </button>
         </div>
       )}
-      <div onMouseUp={handleMouseUp} className="chapter-content select-text" dangerouslySetInnerHTML={{ __html: processedContent }} />
+      <div onMouseUp={handleMouseUp} className="chapter-content select-text text-gray-900 leading-relaxed space-y-4 font-serif text-base sm:text-lg" dangerouslySetInnerHTML={{ __html: processedContent }} />
     </div>
   );
 }
