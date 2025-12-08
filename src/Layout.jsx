@@ -144,10 +144,17 @@ export default function Layout({ children }) {
         a, button {
           min-height: 44px;
           min-width: 44px;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
         }
 
         .font-serif {
           font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        /* Wix embed optimization */
+        @media (max-width: 768px) {
+          .max-w-3xl { max-width: 100%; padding-left: 1rem; padding-right: 1rem; }
+          .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
         }
 
         /* Iframe/embed optimizations */
