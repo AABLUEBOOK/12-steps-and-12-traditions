@@ -39,7 +39,7 @@ export default function ChapterReader() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-800">
+    <div className="min-h-screen bg-slate-800 w-full">
       <header className="sticky top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700 z-10">
         <div className="max-w-3xl mx-auto px-4 py-4">
           <Link to={createPageUrl('Home')} className="text-teal-400 hover:text-teal-300 flex items-center gap-2 text-sm mb-3">
