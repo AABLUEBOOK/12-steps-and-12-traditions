@@ -27,26 +27,43 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-slate-800 will-change-auto">
       <style>{`
-        /* Critical render optimizations */
-        * { box-sizing: border-box; }
-        html { 
-          scroll-behavior: smooth;
-          -webkit-text-size-adjust: 100%;
-          text-rendering: optimizeSpeed;
-        }
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          line-height: 1.5;
-        }
-        img, video { max-width: 100%; height: auto; }
-        
-        /* GPU acceleration for animations */
-        .will-change-auto { will-change: auto; }
-        
-        /* Reduce layout shifts */
-        .chapter-content p { min-height: 1.5em; }
+              /* Critical render optimizations */
+              * { 
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+              html { 
+                scroll-behavior: smooth;
+                -webkit-text-size-adjust: 100%;
+                text-rendering: optimizeSpeed;
+                overflow-x: hidden;
+                width: 100%;
+                height: 100%;
+              }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                line-height: 1.5;
+                width: 100%;
+                min-height: 100vh;
+                overflow-x: hidden;
+              }
+              img, video { 
+                max-width: 100%; 
+                height: auto;
+                display: block;
+              }
+
+              /* GPU acceleration */
+              .will-change-auto { 
+                will-change: auto;
+                transform: translateZ(0);
+              }
+
+              /* Reduce layout shifts */
+              .chapter-content p { min-height: 1.5em; }
         
         html {
           scroll-behavior: smooth;
