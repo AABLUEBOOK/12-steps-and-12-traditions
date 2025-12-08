@@ -206,11 +206,11 @@ export default function Layout({ children }) {
         html.light .border-slate-600, html.light .border-slate-700 { border-color: var(--border-color, #cbd5e1) !important; }
 
         /* Custom accent color */
-        .text-accent { color: #0063e3 !important; }
-        .text-accent-hover:hover { color: #0052c2 !important; }
-        .bg-accent { background-color: #0063e3 !important; }
-        .bg-accent-hover:hover { background-color: #0052c2 !important; }
-        .border-accent { border-color: #0063e3 !important; }
+        .text-accent { color: #5EAAFF !important; }
+        .text-accent-hover:hover { color: #4A9EFF !important; }
+        .bg-accent { background-color: #5EAAFF !important; }
+        .bg-accent-hover:hover { background-color: #4A9EFF !important; }
+        .border-accent { border-color: #5EAAFF !important; }
 
         /* Text size support */
         [data-text-size="small"] { font-size: 14px; }
