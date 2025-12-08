@@ -39,7 +39,7 @@ export const chapters = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-800">
+    <div className="min-h-screen bg-slate-800 w-full">
       <header className="pt-10 pb-6 px-4 text-center">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="flex-1" />
