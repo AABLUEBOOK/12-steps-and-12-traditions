@@ -39,7 +39,7 @@ export default function ChapterReader() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 w-full will-change-auto">
+    <div className="min-h-screen w-full will-change-auto">
       <header className="sticky top-0 glass-material glass-elevation border-b border-white/10 z-10" role="banner">
         <div className="max-w-3xl mx-auto px-4 py-5">
           <Link to={createPageUrl('Home')} className="text-accent hover:text-white flex items-center gap-2 text-sm mb-3 group transition-all duration-200">
@@ -48,8 +48,8 @@ export default function ChapterReader() {
           </Link>
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-xl md:text-2xl font-serif text-white">{chapter.title}</h1>
-              {chapter.pages && <p className="text-slate-200 text-sm mt-1">{chapter.pages}</p>}
+              <h1 className="text-xl md:text-2xl font-title text-[#FFFFFD] tracking-wide">{chapter.title}</h1>
+              {chapter.pages && <p className="text-accent text-sm mt-1 font-body font-semibold">{chapter.pages}</p>}
             </div>
             <Settings />
           </div>

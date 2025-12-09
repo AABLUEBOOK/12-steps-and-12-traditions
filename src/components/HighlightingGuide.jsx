@@ -10,15 +10,29 @@ const HighlightingGuide = memo(function HighlightingGuide() {
   ];
 
   return (
-    <div className="text-center py-5">
-      <p className="text-slate-200 text-sm mb-4 tracking-wide font-medium">Highlighting Guide</p>
-      <div className="flex justify-center items-center gap-5 sm:gap-7 flex-wrap px-4">
-        {highlights.map((item) => (
-          <div key={item.label} className="flex items-center gap-2.5 group cursor-default">
-            <div className={`w-5 h-5 rounded-full ${item.color} shadow-lg group-hover:scale-110 transition-transform duration-200`} />
-            <span className="text-slate-100 text-xs sm:text-sm font-medium">{item.label}</span>
+    <div className="px-3 sm:px-4 py-4 sm:py-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="rounded-xl sm:rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-4 sm:p-6 shadow-xl shadow-[#5EAAFF]/5">
+          <h2 className="text-base sm:text-lg font-bold text-[#FFFFFD] mb-3 sm:mb-4 text-center font-title tracking-wide">Highlighting Guide</h2>
+          <div className="flex flex-col gap-2 sm:gap-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
+              {highlights.slice(0, 3).map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <span className={`w-4 h-4 sm:w-5 sm:h-5 rounded ${item.color} flex-shrink-0`}></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium font-body">{item.label}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
+              {highlights.slice(3).map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <span className={`w-4 h-4 sm:w-5 sm:h-5 rounded ${item.color} flex-shrink-0`}></span>
+                  <span className="text-xs sm:text-sm text-[#FFFFFD] font-medium font-body">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

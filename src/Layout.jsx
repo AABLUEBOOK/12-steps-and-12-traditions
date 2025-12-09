@@ -38,7 +38,7 @@ export default function Layout({ children }) {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-slate-900 will-change-auto">
+      <div className="min-h-screen bg-gradient-to-br from-[#1a1f26] via-[#222A31] to-[#2a3440] will-change-auto">
         <style>{`
               /* Critical render optimizations */
               * { 

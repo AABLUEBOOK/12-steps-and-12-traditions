@@ -38,15 +38,15 @@ export const chapters = [
 
 export default function Home() {
         return (
-          <div className="min-h-screen bg-slate-900 w-full will-change-auto">
-            <header className="pt-10 pb-6 px-4 text-center" role="banner">
+          <div className="min-h-screen w-full will-change-auto">
+            <header className="pt-8 pb-6 px-4 text-center" role="banner">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="flex-1" />
-          <div className="flex-1 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-title text-white tracking-wider mb-2 whitespace-nowrap">
+          <div className="flex-1 text-center px-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-title text-[#FFFFFD] tracking-wider mb-2 leading-tight">
               Twelve Steps And Twelve Traditions
             </h1>
-            <p className="text-accent text-sm md:text-base font-body max-w-2xl mx-auto leading-relaxed">
+            <p className="text-accent text-xs sm:text-sm md:text-base font-body mx-auto leading-relaxed">
               A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
             </p>
           </div>
@@ -64,8 +64,8 @@ export default function Home() {
 
       <HighlightingGuide />
 
-      <main className="max-w-3xl mx-auto px-4 pb-12 pt-4" role="main">
-        <nav className="space-y-2" role="navigation" aria-label="Chapter list">
+      <main className="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-6 pb-8 sm:pb-12" role="main">
+        <nav className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6" role="navigation" aria-label="Chapter list">
           {chapters.map((chapter) => (
             <ChapterCard key={chapter.id} chapter={chapter} />
           ))}
