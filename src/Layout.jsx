@@ -54,8 +54,10 @@ export default function Layout({ children }) {
                 width: 100%;
                 height: 100%;
               }
+              @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
+
               body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 line-height: 1.5;
@@ -169,6 +171,15 @@ export default function Layout({ children }) {
 
         .font-serif {
           font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .font-title {
+          font-family: 'Bebas Neue', cursive;
+          letter-spacing: 0.05em;
+        }
+
+        .font-body {
+          font-family: 'Lato', sans-serif;
         }
 
         /* Wix embed & responsive optimization */

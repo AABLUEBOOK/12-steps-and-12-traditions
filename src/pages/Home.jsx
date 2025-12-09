@@ -43,10 +43,10 @@ export default function Home() {
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="flex-1" />
           <div className="flex-1 text-center">
-            <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wide mb-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-title text-white tracking-wider mb-2 whitespace-nowrap">
               Twelve Steps And Twelve Traditions
             </h1>
-            <p className="text-accent text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-accent text-sm md:text-base font-body max-w-2xl mx-auto leading-relaxed">
               A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
             </p>
           </div>
