@@ -46,6 +46,8 @@ export default function Layout({ children }) {
                 margin: 0;
                 padding: 0;
               }
+              @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
+
               html { 
                 scroll-behavior: smooth;
                 -webkit-text-size-adjust: 100%;
@@ -54,7 +56,6 @@ export default function Layout({ children }) {
                 width: 100%;
                 height: 100%;
               }
-              @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
 
               body {
                 font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

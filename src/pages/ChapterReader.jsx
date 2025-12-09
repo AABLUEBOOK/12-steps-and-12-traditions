@@ -40,11 +40,11 @@ export default function ChapterReader() {
 
   return (
     <div className="min-h-screen w-full will-change-auto">
-      <header className="sticky top-0 glass-material glass-elevation border-b border-white/10 z-10" role="banner">
+      <header className="sticky top-0 bg-white/5 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/30 z-10" role="banner">
         <div className="max-w-3xl mx-auto px-4 py-5">
-          <Link to={createPageUrl('Home')} className="text-accent hover:text-white flex items-center gap-2 text-sm mb-3 group transition-all duration-200">
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
-            <span className="font-medium">Back to Contents</span>
+          <Link to={createPageUrl('Home')} className="text-[#5EAAFF] hover:text-[#FFFFFD] flex items-center gap-2 text-sm mb-3 group transition-all duration-300">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform drop-shadow-lg" /> 
+            <span className="font-body font-semibold">Back to Contents</span>
           </Link>
           <div className="flex items-center justify-between">
             <div>
@@ -81,22 +81,22 @@ export default function ChapterReader() {
       <nav className="max-w-3xl mx-auto px-4 pb-12" role="navigation" aria-label="Chapter navigation">
         <div className="flex items-center justify-between gap-4" role="group">
           {prevChapter ? (
-            <Link to={createPageUrl(`ChapterReader?slug=${prevChapter.slug}`)} className="flex items-center gap-3 glass-material glass-interactive rounded-2xl px-5 py-4 group flex-1">
-              <ChevronLeft className="w-5 h-5 text-accent group-hover:-translate-x-1 transition-transform" />
+            <Link to={createPageUrl(`ChapterReader?slug=${prevChapter.slug}`)} className="flex items-center gap-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl px-5 py-4 group flex-1 hover:bg-white/10 hover:shadow-2xl hover:shadow-[#5EAAFF]/20 hover:scale-105 active:scale-95 transition-all duration-500 shadow-lg shadow-black/20">
+              <ChevronLeft className="w-5 h-5 text-[#5EAAFF] group-hover:-translate-x-1 transition-transform drop-shadow-lg" />
               <div className="text-left">
-                <p className="text-xs text-slate-400 font-medium">Previous</p>
-                <p className="text-sm text-white font-medium">{prevChapter.title}</p>
+                <p className="text-xs text-[#FFFFFD]/70 font-body">Previous</p>
+                <p className="text-sm text-[#FFFFFD] font-body font-semibold">{prevChapter.title}</p>
               </div>
             </Link>
           ) : <div className="flex-1" />}
 
           {nextChapter ? (
-            <Link to={createPageUrl(`ChapterReader?slug=${nextChapter.slug}`)} className="flex items-center gap-3 glass-material glass-interactive rounded-2xl px-5 py-4 group flex-1 justify-end text-right">
+            <Link to={createPageUrl(`ChapterReader?slug=${nextChapter.slug}`)} className="flex items-center gap-3 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl px-5 py-4 group flex-1 justify-end text-right hover:bg-white/10 hover:shadow-2xl hover:shadow-[#5EAAFF]/20 hover:scale-105 active:scale-95 transition-all duration-500 shadow-lg shadow-black/20">
               <div>
-                <p className="text-xs text-slate-400 font-medium">Next</p>
-                <p className="text-sm text-white font-medium">{nextChapter.title}</p>
+                <p className="text-xs text-[#FFFFFD]/70 font-body">Next</p>
+                <p className="text-sm text-[#FFFFFD] font-body font-semibold">{nextChapter.title}</p>
               </div>
-              <ChevronRight className="w-5 h-5 text-accent group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-5 h-5 text-[#5EAAFF] group-hover:translate-x-1 transition-transform drop-shadow-lg" />
             </Link>
           ) : <div className="flex-1" />}
         </div>

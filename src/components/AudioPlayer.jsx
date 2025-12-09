@@ -133,49 +133,49 @@ export default function AudioPlayer({ content }) {
   if (paragraphs.length === 0) return null;
 
   return (
-    <div className="sticky top-14 z-30 glass-material glass-elevation rounded-3xl p-4 sm:p-5 mb-6 will-change-auto" role="region" aria-label="Audio player">
+    <div className="sticky top-14 z-30 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl p-4 sm:p-5 mb-6 shadow-2xl shadow-black/30 will-change-auto" role="region" aria-label="Audio player">
       <div className="flex items-center gap-2 sm:gap-4">
         <Button
           onClick={togglePlay}
-          className="bg-accent hover:bg-accent/90 text-white rounded-full w-12 h-12 sm:w-14 sm:h-14 p-0 flex-shrink-0 shadow-lg shadow-accent/30 hover:shadow-accent/40 hover:scale-105 transition-all duration-300"
+          className="bg-[#5EAAFF]/90 backdrop-blur-xl hover:bg-[#5EAAFF] text-white border border-white/20 rounded-full w-12 h-12 sm:w-14 sm:h-14 p-0 flex-shrink-0 shadow-xl shadow-[#5EAAFF]/40 hover:shadow-2xl hover:shadow-[#5EAAFF]/60 hover:scale-105 active:scale-95 transition-all duration-500"
         >
           {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" />}
         </Button>
 
         <div className="flex-1">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-slate-200 font-medium">Paragraph {currentParagraph + 1} of {paragraphs.length}</span>
-            <span className="text-xs text-accent font-semibold">Speed: {speed}x</span>
+            <span className="text-xs text-[#FFFFFD]/70 font-body font-light">Paragraph {currentParagraph + 1} of {paragraphs.length}</span>
+            <span className="text-xs text-[#5EAAFF] font-body font-bold">Speed: {speed}x</span>
           </div>
           <div className="w-full bg-white/10 rounded-full h-2.5 overflow-hidden backdrop-blur-sm">
-            <div className="bg-gradient-to-r from-accent to-accent/80 h-full transition-all duration-300 shadow-lg shadow-accent/30" style={{ width: `${progress}%` }} />
+            <div className="bg-gradient-to-r from-[#5EAAFF] to-[#5EAAFF]/80 h-full transition-all duration-300 shadow-lg shadow-[#5EAAFF]/30" style={{ width: `${progress}%` }} />
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="text-accent hover:bg-white/10 w-10 h-10 rounded-full transition-all duration-200 hover:scale-110">
-            <SkipBack className="w-5 h-5" />
+          <Button variant="ghost" size="icon" onClick={() => skip('back')} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
+            <SkipBack className="w-5 h-5 drop-shadow-lg" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="text-accent hover:bg-white/10 w-10 h-10 rounded-full transition-all duration-200 hover:scale-110">
-            <SkipForward className="w-5 h-5" />
+          <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
+            <SkipForward className="w-5 h-5 drop-shadow-lg" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="text-accent hover:bg-white/10 w-10 h-10 rounded-full transition-all duration-200 hover:scale-110">
-            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
+            {isMuted ? <VolumeX className="w-5 h-5 drop-shadow-lg" /> : <Volume2 className="w-5 h-5 drop-shadow-lg" />}
           </Button>
         </div>
       </div>
 
       <div className="mt-4 pt-4 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-200 whitespace-nowrap font-medium">Speed:</span>
+          <span className="text-xs text-[#FFFFFD]/70 whitespace-nowrap font-body font-light">Speed:</span>
           <Slider value={[speed]} onValueChange={([val]) => setSpeed(val)} min={0.5} max={2} step={0.25} className="flex-1" />
-          <span className="text-xs text-accent font-semibold w-10 text-right">{speed}x</span>
+          <span className="text-xs text-[#5EAAFF] font-body font-bold w-10 text-right">{speed}x</span>
         </div>
         
         <div className="flex items-center gap-2">
-          <Globe className="w-4 h-4 text-accent" />
+          <Globe className="w-4 h-4 text-[#5EAAFF] drop-shadow-lg" />
           <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-            <SelectTrigger className="flex-1 h-9 text-xs bg-white/5 border-white/10 text-white rounded-xl hover:bg-white/10 transition-colors">
+            <SelectTrigger className="flex-1 h-9 text-xs bg-white/5 backdrop-blur-xl border-white/10 text-[#FFFFFD] rounded-2xl hover:bg-white/8 transition-all duration-300 font-body shadow-lg shadow-black/20">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -189,9 +189,9 @@ export default function AudioPlayer({ content }) {
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-200 whitespace-nowrap font-medium">Voice:</span>
+          <span className="text-xs text-[#FFFFFD]/70 whitespace-nowrap font-body font-light">Voice:</span>
           <Select value={selectedVoice} onValueChange={setSelectedVoice}>
-            <SelectTrigger className="flex-1 h-9 text-xs bg-white/5 border-white/10 text-white rounded-xl hover:bg-white/10 transition-colors">
+            <SelectTrigger className="flex-1 h-9 text-xs bg-white/5 backdrop-blur-xl border-white/10 text-[#FFFFFD] rounded-2xl hover:bg-white/8 transition-all duration-300 font-body shadow-lg shadow-black/20">
               <SelectValue placeholder="Select voice" />
             </SelectTrigger>
             <SelectContent className="max-h-48">

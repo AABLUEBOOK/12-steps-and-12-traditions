@@ -20,47 +20,47 @@ export default function Settings() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="text-accent hover:text-white p-2 rounded-full glass-interactive transition-all duration-300 hover:bg-white/10"
+        className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[#5EAAFF] hover:bg-[#5EAAFF]/20 hover:scale-105 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20"
         title="Settings"
       >
-        <SettingsIcon className="w-6 h-6" />
+        <SettingsIcon className="w-6 h-6 drop-shadow-lg" />
       </button>
 
       {isOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start justify-center pt-20 px-4">
-          <div className="glass-material glass-elevation rounded-3xl max-w-md w-full p-8 relative animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-3xl max-w-md w-full p-8 relative shadow-2xl shadow-black/30 animate-in fade-in slide-in-from-top-4 duration-300">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-slate-200 hover:text-white rounded-full p-2 hover:bg-white/10 transition-all duration-200"
+              className="absolute top-6 right-6 text-[#FFFFFD]/70 hover:text-[#FFFFFD] rounded-full p-2 hover:bg-white/10 hover:scale-110 active:scale-95 transition-all duration-300"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <h2 className="text-xl font-semibold text-white mb-6">Settings</h2>
+            <h2 className="text-2xl font-title tracking-wide text-[#FFFFFD] mb-6">Settings</h2>
 
             <div className="space-y-6">
               <div>
-                <label className="flex items-center gap-2 text-slate-100 mb-3">
-                  {theme === 'dark' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-                  <span className="font-medium">Theme</span>
+                <label className="flex items-center gap-2 text-[#FFFFFD] mb-3">
+                  {theme === 'dark' ? <Moon className="w-5 h-5 text-[#5EAAFF]" /> : <Sun className="w-5 h-5 text-[#5EAAFF]" />}
+                  <span className="font-body font-semibold">Theme</span>
                 </label>
                 <div className="flex gap-3">
                   <button
                     onClick={() => setTheme('dark')}
-                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 font-medium ${
+                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-500 font-body font-semibold hover:scale-105 active:scale-95 ${
                       theme === 'dark'
-                        ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
-                        : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
+                        ? 'bg-[#5EAAFF]/90 backdrop-blur-xl text-white border-white/20 shadow-xl shadow-[#5EAAFF]/40'
+                        : 'bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] hover:bg-white/10 hover:border-[#5EAAFF]/40 shadow-lg shadow-black/20'
                     }`}
                   >
                     Dark
                   </button>
                   <button
                     onClick={() => setTheme('light')}
-                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 font-medium ${
+                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-500 font-body font-semibold hover:scale-105 active:scale-95 ${
                       theme === 'light'
-                        ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
-                        : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
+                        ? 'bg-[#5EAAFF]/90 backdrop-blur-xl text-white border-white/20 shadow-xl shadow-[#5EAAFF]/40'
+                        : 'bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] hover:bg-white/10 hover:border-[#5EAAFF]/40 shadow-lg shadow-black/20'
                     }`}
                   >
                     Light
@@ -69,19 +69,19 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-slate-100 mb-3">
-                  <Type className="w-5 h-5" />
-                  <span className="font-medium">Text Size</span>
+                <label className="flex items-center gap-2 text-[#FFFFFD] mb-3">
+                  <Type className="w-5 h-5 text-[#5EAAFF]" />
+                  <span className="font-body font-semibold">Text Size</span>
                 </label>
                 <div className="flex gap-3">
                   {['small', 'medium', 'large'].map((size) => (
                     <button
                       key={size}
                       onClick={() => setTextSize(size)}
-                      className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 capitalize font-medium ${
+                      className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-500 capitalize font-body font-semibold hover:scale-105 active:scale-95 ${
                         textSize === size
-                          ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
-                          : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
+                          ? 'bg-[#5EAAFF]/90 backdrop-blur-xl text-white border-white/20 shadow-xl shadow-[#5EAAFF]/40'
+                          : 'bg-white/5 backdrop-blur-xl border-white/20 text-[#5EAAFF] hover:bg-white/10 hover:border-[#5EAAFF]/40 shadow-lg shadow-black/20'
                       }`}
                     >
                       {size}
