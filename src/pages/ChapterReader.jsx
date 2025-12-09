@@ -63,16 +63,18 @@ export default function ChapterReader() {
       </div>
 
       <main className="max-w-3xl mx-auto px-4 py-8" role="main">
-        <Suspense fallback={<div className="h-20 bg-slate-700/30 rounded-lg animate-pulse" />}>
+        <Suspense fallback={<div className="h-20 bg-white/5 backdrop-blur-xl rounded-2xl animate-pulse" />}>
           {content && <AudioPlayer content={content} />}
         </Suspense>
 
-        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl shadow-black/20">
+        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl shadow-black/30">
           <Suspense fallback={<div className="h-40 bg-gray-100 rounded animate-pulse" />}>
             {content ? (
-              <HighlightableContent content={content} chapterSlug={slug} />
+              <div className="font-body text-gray-800 leading-relaxed">
+                <HighlightableContent content={content} chapterSlug={slug} />
+              </div>
             ) : (
-              <p className="text-gray-600 text-center italic">Content for "{chapter.title}" will be added here.</p>
+              <p className="text-gray-600 text-center italic font-body">Content for "{chapter.title}" will be added here.</p>
             )}
           </Suspense>
         </div>
