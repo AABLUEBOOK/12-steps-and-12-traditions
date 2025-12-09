@@ -15,7 +15,7 @@ const ChapterCard = memo(function ChapterCard({ chapter }) {
              p-4 sm:p-5 transition-all duration-500 
              hover:bg-white/8 hover:border-[#5EAAFF]/40 hover:shadow-2xl hover:shadow-[#5EAAFF]/20
              hover:scale-[1.02] active:scale-[0.98]
-             shadow-lg shadow-black/20 flex items-center justify-between will-change-auto" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(94, 170, 255, 0.03) 10px, rgba(94, 170, 255, 0.03) 20px);">
+             shadow-lg shadow-black/20 flex items-center justify-between will-change-auto" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(94, 170, 255, 0.03) 10px, rgba(94, 170, 255, 0.03) 20px)' }}>
         <div className="flex items-center gap-3 flex-1">
           {showNumber && displayNumber && (
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 backdrop-blur-xl
