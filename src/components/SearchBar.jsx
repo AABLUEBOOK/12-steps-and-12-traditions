@@ -94,19 +94,19 @@ export default function SearchBar() {
   return (
     <div ref={wrapperRef} className="relative w-full max-w-md mx-auto">
       <div className="relative">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-accent/70" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#5EAAFF]/70 drop-shadow-lg" />
         <Input
           type="text"
           placeholder="Search the book..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={handleFocus}
-          className="pl-12 pr-12 h-12 glass-material border-white/10 text-white placeholder:text-slate-400 focus:border-accent rounded-2xl transition-all duration-300 focus:shadow-lg focus:shadow-accent/20"
+          className="pl-12 pr-12 h-12 bg-white/5 backdrop-blur-3xl border-white/10 text-[#FFFFFD] placeholder:text-[#FFFFFD]/40 focus:border-[#5EAAFF]/50 rounded-2xl transition-all duration-500 focus:shadow-xl focus:shadow-[#5EAAFF]/20 font-body shadow-lg shadow-black/20 hover:bg-white/8"
         />
         {query && (
           <button
             onClick={handleClear}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white rounded-full p-1.5 hover:bg-white/10 transition-all duration-200"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-[#FFFFFD]/40 hover:text-[#FFFFFD] rounded-full p-1.5 hover:bg-white/10 hover:scale-110 active:scale-95 transition-all duration-300"
           >
             <X className="w-4 h-4" />
           </button>
@@ -114,24 +114,24 @@ export default function SearchBar() {
       </div>
 
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full mt-3 w-full glass-material glass-elevation rounded-2xl z-50 max-h-80 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full mt-3 w-full bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl z-50 max-h-80 overflow-y-auto shadow-2xl shadow-black/30 animate-in fade-in slide-in-from-top-2 duration-200">
           {results.map((result, idx) => (
             <Link
               key={idx}
               to={createPageUrl(`ChapterReader?slug=${result.chapter.slug}`)}
               onClick={() => { setIsOpen(false); setQuery(''); }}
-              className="block px-5 py-4 hover:bg-white/10 border-b border-white/10 last:border-b-0 transition-all duration-200 first:rounded-t-2xl last:rounded-b-2xl"
+              className="block px-5 py-4 hover:bg-white/10 hover:scale-[1.02] border-b border-white/10 last:border-b-0 transition-all duration-300 first:rounded-t-2xl last:rounded-b-2xl"
             >
-              <p className="text-accent text-sm font-semibold">{result.chapter.title}</p>
-              <p className="text-slate-300 text-xs mt-1.5 line-clamp-2 leading-relaxed">{result.snippet}</p>
+              <p className="text-[#5EAAFF] text-sm font-title tracking-wide">{result.chapter.title}</p>
+              <p className="text-[#FFFFFD]/70 text-xs mt-1.5 line-clamp-2 leading-relaxed font-body font-light">{result.snippet}</p>
             </Link>
           ))}
         </div>
       )}
 
       {isOpen && query.length >= 2 && results.length === 0 && content && (
-        <div className="absolute top-full mt-3 w-full glass-material glass-elevation rounded-2xl z-50 p-5 animate-in fade-in slide-in-from-top-2 duration-200">
-          <p className="text-slate-400 text-sm text-center font-medium">No results found</p>
+        <div className="absolute top-full mt-3 w-full bg-white/5 backdrop-blur-3xl border border-white/10 rounded-2xl z-50 p-5 shadow-2xl shadow-black/30 animate-in fade-in slide-in-from-top-2 duration-200">
+          <p className="text-[#FFFFFD]/70 text-sm text-center font-body font-light">No results found</p>
         </div>
       )}
     </div>

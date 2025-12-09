@@ -159,7 +159,7 @@ export default function AudioPlayer({ content }) {
           <Button variant="ghost" size="icon" onClick={() => skip('forward')} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
             <SkipForward className="w-5 h-5 drop-shadow-lg" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
+          <Button variant="ghost" size="icon" onClick={() => setIsMuted(!isMuted)} className="bg-[#5EAAFF]/10 backdrop-blur-xl rounded-full p-2 border border-[#5EAAFF]/20 text-[#5EAAFF] hover:bg-[#5EAAFF]/20 w-10 h-10 hover:scale-110 active:scale-95 transition-all duration-500 shadow-lg shadow-[#5EAAFF]/20">
             {isMuted ? <VolumeX className="w-5 h-5 drop-shadow-lg" /> : <Volume2 className="w-5 h-5 drop-shadow-lg" />}
           </Button>
         </div>
