@@ -10,16 +10,16 @@ const ChapterCard = memo(function ChapterCard({ chapter }) {
 
   return (
     <Link to={createPageUrl(`ChapterReader?slug=${chapter.slug}`)} className="block group chapter-card">
-      <div className="bg-slate-800/50 hover:bg-slate-800/80 border border-slate-700/50 rounded-lg px-5 py-4 transition-all duration-200 flex items-center justify-between will-change-auto">
+      <div className="glass-material glass-elevation glass-interactive rounded-3xl px-6 py-5 flex items-center justify-between will-change-auto">
         <div className="flex items-center gap-3">
           {showNumber && displayNumber && (
-            <span className="text-accent font-mono text-sm min-w-[24px]">{displayNumber}</span>
+            <span className="text-accent font-mono text-sm min-w-[24px] font-semibold">{displayNumber}</span>
           )}
           <span className="text-white font-medium tracking-wide">{title}</span>
         </div>
         <div className="flex items-center gap-3">
-          {pages && <span className="text-slate-300 text-sm">{pages}</span>}
-          <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-slate-200 transition-colors" />
+          {pages && <span className="text-slate-300/90 text-sm">{pages}</span>}
+          <ChevronRight className="w-5 h-5 text-accent/70 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300" />
         </div>
       </div>
     </Link>

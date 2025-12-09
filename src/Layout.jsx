@@ -212,6 +212,53 @@ export default function Layout({ children }) {
         .bg-accent-hover:hover { background-color: #4A9EFF !important; }
         .border-accent { border-color: #5EAAFF !important; }
 
+        /* Liquid Glass Material System */
+        .glass-material {
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glass-elevation {
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+                      0 2px 8px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .glass-interactive {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-interactive:hover {
+          background: rgba(255, 255, 255, 0.12);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45),
+                      0 4px 12px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .glass-interactive:active {
+          transform: translateY(0px) scale(0.98);
+        }
+
+        /* Light mode glass */
+        html.light .glass-material {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        html.light .glass-elevation {
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1),
+                      0 2px 8px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        html.light .glass-interactive:hover {
+          background: rgba(255, 255, 255, 0.85);
+          box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15),
+                      0 4px 12px 0 rgba(0, 0, 0, 0.08);
+        }
+
         /* Text size support */
         [data-text-size="small"] { font-size: 14px; }
         [data-text-size="medium"] { font-size: 16px; }

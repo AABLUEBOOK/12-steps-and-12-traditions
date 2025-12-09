@@ -56,8 +56,8 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="px-4 pb-4">
-        <Suspense fallback={<div className="h-10 max-w-md mx-auto bg-slate-700 rounded-lg animate-pulse" />}>
+      <div className="px-4 pb-6">
+        <Suspense fallback={<div className="h-12 max-w-md mx-auto glass-material rounded-2xl animate-pulse" />}>
           <SearchBar />
         </Suspense>
       </div>

@@ -20,18 +20,18 @@ export default function Settings() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="text-accent text-accent-hover p-2"
+        className="text-accent hover:text-white p-2 rounded-full glass-interactive transition-all duration-300 hover:bg-white/10"
         title="Settings"
       >
         <SettingsIcon className="w-6 h-6" />
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-20 px-4">
-          <div className="bg-slate-700 rounded-lg max-w-md w-full p-6 relative">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start justify-center pt-20 px-4">
+          <div className="glass-material glass-elevation rounded-3xl max-w-md w-full p-8 relative animate-in fade-in slide-in-from-top-4 duration-300">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-slate-200 hover:text-white"
+              className="absolute top-6 right-6 text-slate-200 hover:text-white rounded-full p-2 hover:bg-white/10 transition-all duration-200"
             >
               <X className="w-5 h-5" />
             </button>
@@ -47,20 +47,20 @@ export default function Settings() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => setTheme('dark')}
-                    className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
+                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 font-medium ${
                       theme === 'dark'
-                        ? 'bg-accent border-accent text-white'
-                        : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
+                        ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
+                        : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
                     }`}
                   >
                     Dark
                   </button>
                   <button
                     onClick={() => setTheme('light')}
-                    className={`flex-1 py-2 px-4 rounded-lg border transition-colors ${
+                    className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 font-medium ${
                       theme === 'light'
-                        ? 'bg-accent border-accent text-white'
-                        : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
+                        ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
+                        : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
                     }`}
                   >
                     Light
@@ -78,10 +78,10 @@ export default function Settings() {
                     <button
                       key={size}
                       onClick={() => setTextSize(size)}
-                      className={`flex-1 py-2 px-4 rounded-lg border transition-colors capitalize ${
+                      className={`flex-1 py-3 px-4 rounded-2xl border transition-all duration-300 capitalize font-medium ${
                         textSize === size
-                          ? 'bg-accent border-accent text-white'
-                          : 'bg-slate-600 border-slate-500 text-slate-100 hover:bg-slate-500'
+                          ? 'bg-accent border-accent text-white shadow-lg shadow-accent/30'
+                          : 'bg-white/5 border-white/10 text-slate-100 hover:bg-white/10 hover:scale-105'
                       }`}
                     >
                       {size}

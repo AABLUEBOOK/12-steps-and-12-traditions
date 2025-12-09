@@ -67,18 +67,18 @@ export default function HighlightableContent({ content, chapterSlug }) {
     <div className="relative">
       {picker.show && (
         <div
-          className="fixed z-50 bg-slate-800 rounded-lg shadow-xl border border-slate-600 p-2 flex gap-2"
+          className="fixed z-50 glass-material glass-elevation rounded-2xl p-3 flex gap-2 items-center animate-in fade-in slide-in-from-bottom-2 duration-200"
           style={{ left: picker.x, top: picker.y, transform: 'translateX(-50%)' }}
         >
-          <Highlighter className="w-4 h-4 text-slate-400 mr-1" />
+          <Highlighter className="w-4 h-4 text-accent mr-1" />
           {Object.entries(COLORS).map(([color, bg]) => (
             <button
               key={color}
               onClick={() => saveHighlight(color)}
-              className={`w-6 h-6 rounded ${bg.replace('/50', '')} hover:scale-110 transition-transform`}
+              className={`w-7 h-7 rounded-full ${bg.replace('/50', '')} hover:scale-125 transition-all duration-200 shadow-md hover:shadow-lg`}
             />
           ))}
-          <button onClick={() => setPicker(p => ({ ...p, show: false }))} className="ml-1 text-slate-400 hover:text-white">
+          <button onClick={() => setPicker(p => ({ ...p, show: false }))} className="ml-1 text-slate-300 hover:text-white rounded-full p-1 hover:bg-white/10 transition-all">
             <X className="w-4 h-4" />
           </button>
         </div>
