@@ -41,16 +41,16 @@ export default function Home() {
           <div className="min-h-screen w-full will-change-auto">
             <header className="pt-8 pb-6 px-4 text-center" role="banner">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
-          <div className="flex-1" />
-          <div className="flex-1 text-center px-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-title text-[#FFFFFD] tracking-wider mb-2 leading-tight">
+          <div className="hidden sm:flex flex-1" />
+          <div className="flex-1 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-title text-[#FFFFFD] tracking-wider mb-2 leading-tight px-2">
               Twelve Steps And Twelve Traditions
             </h1>
-            <p className="text-accent text-xs sm:text-sm md:text-base font-body mx-auto leading-relaxed">
+            <p className="text-accent text-xs sm:text-sm md:text-base font-body mx-auto leading-relaxed px-2">
               A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
             </p>
           </div>
-          <div className="flex-1 flex justify-end">
+          <div className="absolute right-4 top-4 sm:relative sm:flex-1 sm:flex sm:justify-end">
             <Settings />
           </div>
         </div>
