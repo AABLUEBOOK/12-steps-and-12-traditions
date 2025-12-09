@@ -42,11 +42,11 @@ export default function Home() {
             <header className="pt-8 pb-6 px-4 text-center" role="banner">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div className="hidden sm:flex flex-1" />
-          <div className="flex-1 text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-title text-[#FFFFFD] tracking-wider mb-2 leading-tight px-2">
+          <div className="flex-1 text-center max-w-6xl mx-auto">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-title font-semibold text-[#FFFFFD] tracking-wider mb-2 leading-tight px-3 sm:px-4">
               Twelve Steps And Twelve Traditions
             </h1>
-            <p className="text-accent text-xs sm:text-sm md:text-base font-body mx-auto leading-relaxed px-2">
+            <p className="text-accent text-xs sm:text-sm font-body mx-auto leading-relaxed px-3 sm:px-4">
               A Guide for the Twelve Steps and Twelve Traditions of Alcoholics Anonymous
             </p>
           </div>
